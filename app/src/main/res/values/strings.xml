@@ -3,4 +3,9 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="book_one">Herald and the Purple Crayon</string>
+    <string name="book_two">Giraffes Cant Dance</string>
+    <string name="book_three">The Giving Tree</string>
+    <string name="title_activity_global_variables">GlobalVariables</string>
+    <string name="title_activity_wish_list">WishList</string>
 </resources>
