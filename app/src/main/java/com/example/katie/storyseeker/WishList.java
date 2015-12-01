@@ -26,35 +26,34 @@ public class WishList extends ListActivity {
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
-        Globals g = (Globals)getApplication();
-        boolean haikuBool=g.getBool();
-        boolean triviaBool = g.getTrivia();
+        GlobalList g = (GlobalList)getApplication();
+        boolean heraldBool=g.getHerald();
+        boolean giraffeBool = g.getGirffe();
 
-        //Boolean haikuEvent = bundle.getBoolean("haiku");
 
         text = (TextView) findViewById(R.id.mainText);
         listValues = new ArrayList<String>();
         if(!bundle.isEmpty()) {
-            Boolean haikuEvent = bundle.getBoolean("haiku");
+            Boolean herald = bundle.getBoolean("herald");
 
 
-            if (haikuEvent == true) {
-                haikuBool = true;
+            if (herald == true) {
+                heraldBool = true;
 
             }
 
-            Boolean triviaEvent = bundle.getBoolean("teamTrivia");
+            Boolean giraffe = bundle.getBoolean("giraffe");
 
-            if (triviaEvent == true) {
-                triviaBool = true;
+            if (giraffe == true) {
+                giraffeBool = true;
 
             }
         }
-        if (haikuBool == true) {
-            listValues.add("Haiku Deathmatch        Fri. 10 pm");
+        if (heraldBool == true) {
+            listValues.add("Herald and the purple crayon");
         }
-        if (triviaBool == true) {
-            listValues.add("Team Trivia             Sat. 8 pm");
+        if (giraffeBool == true) {
+            listValues.add("Giraffes cant dance");
         }
 
         listValues.add("Good Night Moon");

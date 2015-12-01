@@ -33,9 +33,9 @@ public class StartScreen extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),WishList.class);
                 Bundle bundle = new Bundle();
-                Globals g = (Globals)getApplication();
-                g.setTrivia(true);
-                startActivity(new Intent(StartScreen.this, StartScreen.class));
+                GlobalList g = (GlobalList)getApplication();
+                g.setHerald(true);
+               // startActivity(new Intent(StartScreen.this, StartScreen.class));
             }
         });
 
@@ -46,9 +46,9 @@ public class StartScreen extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), WishList.class);
                 Bundle bundle = new Bundle();
-                Globals g = (Globals)getApplication();
-                g.setBool(true);
-                startActivity(new Intent(StartScreen.this,StartScreen.class));
+                GlobalList g = (GlobalList)getApplication();
+                g.setGiraffe(true);
+                //startActivity(new Intent(StartScreen.this,StartScreen.class));
             }
         });
 
