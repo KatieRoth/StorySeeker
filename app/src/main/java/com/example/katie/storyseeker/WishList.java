@@ -1,4 +1,3 @@
-
 package com.example.katie.storyseeker;
 
 import android.app.ListActivity;
@@ -25,35 +24,39 @@ public class WishList extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wish_list);
 
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        Globals g = (Globals)getApplication();
+        boolean haikuBool=g.getBool();
+        boolean triviaBool = g.getTrivia();
 
+        //Boolean haikuEvent = bundle.getBoolean("haiku");
 
         text = (TextView) findViewById(R.id.mainText);
         listValues = new ArrayList<String>();
-        /*
         if(!bundle.isEmpty()) {
-            Boolean bookOne = bundle.getBoolean("book1");
-            if (bookOne == true) {
-                book_one_bool = true;
+            Boolean haikuEvent = bundle.getBoolean("haiku");
+
+
+            if (haikuEvent == true) {
+                haikuBool = true;
+
             }
-            Boolean bookTwo = bundle.getBoolean("book_two");
-            if (bookTwo == true) {
-                book_two_bool = true;
+
+            Boolean triviaEvent = bundle.getBoolean("teamTrivia");
+
+            if (triviaEvent == true) {
+                triviaBool = true;
+
             }
-            Boolean bookThree = bundle.getBoolean("book_two");
-            if (bookThree == true) {
-                book_three_bool = true;
-            }
         }
-        if (book_one_bool == true) {
-            listValues.add("Herald and the Purple Crayon");
+        if (haikuBool == true) {
+            listValues.add("Haiku Deathmatch        Fri. 10 pm");
         }
-        if (book_two_bool == true) {
-            listValues.add("Giraffes Can't Dance");
+        if (triviaBool == true) {
+            listValues.add("Team Trivia             Sat. 8 pm");
         }
-        if (book_three_bool == true) {
-            listValues.add("The Giving Tree");
-        }
-        */
+
         listValues.add("Good Night Moon");
         listValues.add("the Hungry Hungry Caterpillar");
         listValues.add("The Jewel Heart");

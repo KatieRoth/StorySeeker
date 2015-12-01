@@ -16,6 +16,8 @@ public class StartScreen extends AppCompatActivity {
         setContentView(R.layout.activity_start_screen);
 
         Button button = (Button) findViewById(R.id.wish_list);
+
+
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(StartScreen.this, WishList.class);
@@ -24,6 +26,34 @@ public class StartScreen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        Button saveButton = (Button) findViewById(R.id.button_one);
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),WishList.class);
+                Bundle bundle = new Bundle();
+                Globals g = (Globals)getApplication();
+                g.setTrivia(true);
+                startActivity(new Intent(StartScreen.this, StartScreen.class));
+            }
+        });
+
+
+        Button saveButton2 = (Button) findViewById(R.id.button_two);
+
+        saveButton2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WishList.class);
+                Bundle bundle = new Bundle();
+                Globals g = (Globals)getApplication();
+                g.setBool(true);
+                startActivity(new Intent(StartScreen.this,StartScreen.class));
+            }
+        });
+
+
+
     }
 
     @Override
