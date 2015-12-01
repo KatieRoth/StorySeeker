@@ -52,6 +52,17 @@ public class StartScreen extends AppCompatActivity {
             }
         });
 
+        Button removeButton = (Button) findViewById(R.id.button_three);
+
+        removeButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WishList.class);
+                Bundle bundle = new Bundle();
+                GlobalList g = (GlobalList) getApplication();
+                g.setHerald(false);
+            }
+        });
+
 
 
     }
