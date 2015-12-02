@@ -1,6 +1,11 @@
 package com.example.katie.storyseeker;
 
+<<<<<<< HEAD
 import android.content.Intent;
+=======
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+>>>>>>> 89e635218c8d4453e0041a71791a06fe27c63b1a
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -19,7 +24,10 @@ public class StartScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_screen);
+
+        DataBaseHelper myDbHelper = new DataBaseHelper(this);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -42,4 +50,6 @@ public class StartScreen extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
