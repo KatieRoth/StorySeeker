@@ -7,25 +7,24 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+public class QuizStart extends AppCompatActivity {
 
-//Seasons, Winter, Activities
-public class StartScreen extends AppCompatActivity {
-
-    public void quiz(View view){
-        Intent intent = new Intent(this, QuizStart.class);
-        startActivity(intent);
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start_screen);
+        setContentView(R.layout.activity_quiz_start);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_start_screen, menu);
+        getMenuInflater().inflate(R.menu.menu_quiz_start, menu);
         return true;
+    }
+
+    public void seasons(View view){
+        Intent intent = new Intent(this, Seasons.class);
+        startActivity(intent);
     }
 
     @Override

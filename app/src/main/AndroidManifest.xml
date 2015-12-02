@@ -16,6 +16,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".QuizStart"
+            android:label="@string/title_activity_quiz_start"
+            android:parentActivityName=".StartScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.katie.storyseeker.StartScreen" />
+        </activity>
+        <activity
+            android:name=".Seasons"
+            android:label="@string/title_activity_seasons"
+            android:parentActivityName=".QuizStart" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.katie.storyseeker.QuizStart" />
+        </activity>
+        <activity
+            android:name=".Winter"
+            android:label="@string/title_activity_winter"
+            android:parentActivityName=".Seasons" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.katie.storyseeker.Seasons" />
+        </activity>
     </application>
 
 </manifest>
