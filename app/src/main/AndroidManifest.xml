@@ -40,6 +40,26 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.katie.storyseeker.Seasons" />
         </activity>
+        <activity
+            android:name=".SelectedBooks"
+            android:label="@string/title_activity_selected_books" >
+        </activity>
+        <activity
+            android:name=".WishList"
+            android:label="@string/title_activity_wish_list" >
+        </activity>
+        <activity
+            android:name=".ColdLadyBook"
+            android:label="@string/title_activity_cold_lady_book" >
+        </activity>
+        <activity
+            android:name=".WinterIsBook"
+            android:label="@string/title_activity_winter_is_book" >
+        </activity>
+        <activity
+            android:name=".MakingAFriend"
+            android:label="@string/title_activity_making_afriend" >
+        </activity>
     </application>
 
 </manifest>
