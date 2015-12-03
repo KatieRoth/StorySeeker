@@ -6,7 +6,15 @@
     <string name="title_activity_quiz_start">QuizStart</string>
     <string name="title_activity_seasons">Seasons</string>
     <string name="title_activity_winter">Winter</string>
+<<<<<<< HEAD
     <string name="title_activity_summer">Summer</string>
     <string name="title_activity_fall">Fall</string>
     <string name="title_activity_spring">Spring</string>
+=======
+    <string name="title_activity_selected_books">SelectedBooks</string>
+    <string name="title_activity_wish_list">WishList</string>
+    <string name="title_activity_cold_lady_book">ColdLadyBook</string>
+    <string name="title_activity_winter_is_book">WinterIsBook</string>
+    <string name="title_activity_making_afriend">MakingAFriend</string>
+>>>>>>> e9dffbf6717a3a16ce2a9a15cd72797c90a8f8f3
 </resources>
