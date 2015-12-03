@@ -40,6 +40,30 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.katie.storyseeker.Seasons" />
         </activity>
+        <activity
+            android:name=".Summer"
+            android:label="@string/title_activity_summer"
+            android:parentActivityName=".Seasons" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.katie.storyseeker.Seasons" />
+        </activity>
+        <activity
+            android:name=".Fall"
+            android:label="@string/title_activity_fall"
+            android:parentActivityName=".Seasons" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.katie.storyseeker.Seasons" />
+        </activity>
+        <activity
+            android:name=".Spring"
+            android:label="@string/title_activity_spring"
+            android:parentActivityName=".Seasons" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.katie.storyseeker.Seasons" />
+        </activity>
     </application>
 
 </manifest>

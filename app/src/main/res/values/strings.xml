@@ -6,4 +6,7 @@
     <string name="title_activity_quiz_start">QuizStart</string>
     <string name="title_activity_seasons">Seasons</string>
     <string name="title_activity_winter">Winter</string>
+    <string name="title_activity_summer">Summer</string>
+    <string name="title_activity_fall">Fall</string>
+    <string name="title_activity_spring">Spring</string>
 </resources>

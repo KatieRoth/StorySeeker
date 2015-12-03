@@ -1,41 +1,23 @@
 package com.example.katie.storyseeker;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-public class Seasons extends AppCompatActivity {
+public class Spring extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_seasons);
+        setContentView(R.layout.activity_spring);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_seasons, menu);
+        getMenuInflater().inflate(R.menu.menu_spring, menu);
         return true;
-    }
-    public void winter(View view){
-        Intent intent = new Intent(this, Winter.class);
-        startActivity(intent);
-    }
-    public void spring(View view){
-        Intent intent = new Intent(this, Spring.class);
-        startActivity(intent);
-    }
-    public void summer(View view){
-        Intent intent = new Intent(this, Summer.class);
-        startActivity(intent);
-    }
-    public void fall(View view){
-        Intent intent = new Intent(this, Fall.class);
-        startActivity(intent);
     }
 
     @Override
