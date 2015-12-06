@@ -41,7 +41,6 @@
                 android:value="com.example.katie.storyseeker.Seasons" />
         </activity>
         <activity
-<<<<<<< HEAD
             android:name=".Summer"
             android:label="@string/title_activity_summer"
             android:parentActivityName=".Seasons" >
@@ -64,7 +63,8 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.katie.storyseeker.Seasons" />
-=======
+        </activity>
+        <activity
             android:name=".SelectedBooks"
             android:label="@string/title_activity_selected_books" >
         </activity>
@@ -83,7 +83,7 @@
         <activity
             android:name=".MakingAFriend"
             android:label="@string/title_activity_making_afriend" >
->>>>>>> e9dffbf6717a3a16ce2a9a15cd72797c90a8f8f3
+
         </activity>
     </application>
 
