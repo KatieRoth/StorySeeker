@@ -16,7 +16,7 @@
     <ImageButton
         android:layout_width="275dp"
         android:layout_height="275dp"
-        android:src="@drawable/tree"
+        android:src="@drawable/ornament"
         android:id="@+id/winterHolidays"
         android:background="@null"
         android:paddingLeft="20dp"
