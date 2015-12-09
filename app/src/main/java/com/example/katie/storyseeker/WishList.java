@@ -13,6 +13,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.LinkedList;
+import java.util.List;
 
 
 //////////http://stackoverflow.com/questions/31227404/set-long-click-listener-for-listview
@@ -25,28 +27,23 @@ import android.widget.Toast;
 public class WishList extends ListActivity{
 
 
-    String[] books ={
-            "There Was a Cold Lady Who Swallowed Some Snow!",
-            "Winter Is",
-            "Making a Friend"
-    };
-
-    //TextView listview;
-
+    List<String> books = new LinkedList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_wish_list);
 
-        this.setListAdapter(new ArrayAdapter<String>(
-                this, R.layout.list,
-                R.id.Itemname, books));
-       // TextView listview = (TextView) findViewById(R.id.Itemname);
-
-       // listview.setLongClickable(true);
+        books.add("Work dammit");
+        setListAdapter(new ArrayAdapter<String>(this, R.layout.list, R.id.Itemname, books));
+        ListView lv = getListView();
+        lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> av, View v, int pos, long id) {
+                Toast.makeText(WishList.this, "LongClick", Toast.LENGTH_LONG).show();
+                return true;
+            }
+        });
     }
-
 
 
    /* public boolean onItemLongClick(AdapterView<?> l, View v,
