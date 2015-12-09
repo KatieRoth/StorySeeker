@@ -1,15 +1,22 @@
 package com.example.katie.storyseeker;
 
 import android.app.ListActivity;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,22 +34,45 @@ import java.util.List;
 public class WishList extends ListActivity{
 
 
+    LinearLayout layoutOfPopup;
+    PopupWindow popupMessage;
+    Button popupButton, insidePopupButton;
+    TextView popupText;
+    Button btnClosePopup;
+
     List<String> books = new LinkedList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        books.add("Work dammit");
+        books.add("Winter Is");
         setListAdapter(new ArrayAdapter<String>(this, R.layout.list, R.id.Itemname, books));
         ListView lv = getListView();
         lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> av, View v, int pos, long id) {
-                Toast.makeText(WishList.this, "LongClick", Toast.LENGTH_LONG).show();
+                //Toast.makeText(WishList.this, "LongClick", Toast.LENGTH_LONG).show();
+
+                initiatePopupWindow();
+                //popupInit();
+
                 return true;
             }
         });
+
+
+        books.add("Please work");
+        setListAdapter(new ArrayAdapter<String>(this, R.layout.list, R.id.Itemname, books));
+        lv = getListView();
+        lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> av, View v, int pos, long id) {
+                initiatePopupWindow();
+                return true;
+            }
+        });
+
     }
 
 
@@ -94,4 +124,39 @@ public class WishList extends ListActivity{
 
         return super.onOptionsItemSelected(item);
     }
+
+    private PopupWindow pwindo;
+
+    private void initiatePopupWindow() {
+        try {
+// We need to get the instance of the LayoutInflater
+            LayoutInflater inflater = (LayoutInflater) WishList.this
+                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            View layout = inflater.inflate(R.layout.popup,
+                    (ViewGroup) findViewById(R.id.popup_element));
+            pwindo = new PopupWindow(layout, 300, 370, true);
+            pwindo.showAtLocation(layout, Gravity.CENTER, 0, 0);
+
+            btnClosePopup = (Button) layout.findViewById(R.id.btn_close_popup);
+            btnClosePopup.setOnClickListener(cancel_button_click_listener);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private View.OnClickListener cancel_button_click_listener = new OnClickClass();
+
+    private class OnClickClass implements View.OnClickListener{
+        public void onClick(View v) {
+            //Remove Book 
+            pwindo.dismiss();
+
+        }
+    };
+
+
+
+
 }
