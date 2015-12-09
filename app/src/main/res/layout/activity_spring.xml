@@ -33,5 +33,13 @@
         android:scaleType="fitXY"
         android:layout_alignTop="@+id/springHolidays"
         android:layout_toEndOf="@+id/springHolidays" />
-
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:scaleType="fitXY"
+        android:background="@null"
+        android:src="@drawable/home"
+        android:onClick="home"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/springActivities" />
 </RelativeLayout>

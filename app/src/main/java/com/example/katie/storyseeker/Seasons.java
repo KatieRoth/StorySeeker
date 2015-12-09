@@ -73,4 +73,8 @@ public class Seasons extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    public void home(View view){
+        Intent i = new Intent(this, StartScreen.class);
+        startActivity(i);
+    }
 }

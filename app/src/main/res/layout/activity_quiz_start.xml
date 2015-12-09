@@ -11,48 +11,56 @@
         android:scaleType="fitXY"
         android:src="@drawable/chooseone"
         android:layout_marginTop="50dp"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:id="@+id/imageView" />
     <ImageButton
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:src="@drawable/season"
+        android:src="@drawable/castle"
+        android:scaleType="fitXY"
+        android:background="@null"
+        android:id="@+id/castle"
+        android:paddingLeft="20dp"
+        android:layout_alignTop="@+id/seasons"
+        android:layout_alignParentStart="true" />
+    <ImageView
+        android:layout_width="275dp"
+        android:layout_height="275dp"
+        android:src="@drawable/seasons"
         android:scaleType="fitXY"
         android:background="@null"
         android:onClick="seasons"
         android:id="@+id/seasons"
         android:paddingLeft="20dp"
-        android:layout_above="@+id/thing3"
-        android:layout_alignParentStart="true" />
-    <ImageView
-        android:layout_width="275dp"
-        android:layout_height="275dp"
-        android:src="@drawable/puppy"
-        android:scaleType="fitXY"
-        android:background="@null"
-        android:id="@+id/thing2"
-        android:paddingLeft="20dp"
-        android:layout_marginTop="123dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/thing4" />
+        android:layout_below="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView" />
     <ImageView
         android:layout_width="275dp"
         android:layout_height="275dp"
         android:scaleType="fitXY"
-        android:src="@drawable/puppy"
+        android:src="@drawable/animal"
         android:background="@null"
         android:paddingLeft="20dp"
-        android:id="@+id/thing3"
-        android:layout_below="@+id/thing2" />
+        android:id="@+id/animal"
+        android:layout_below="@+id/seasons" />
     <ImageView
         android:layout_width="275dp"
         android:layout_height="275dp"
         android:scaleType="fitXY"
-        android:src="@drawable/puppy"
+        android:src="@drawable/abc"
         android:paddingLeft="20dp"
         android:background="@null"
-        android:id="@+id/thing4"
-        android:layout_below="@+id/thing2"
-        android:layout_toEndOf="@+id/thing3" />
+        android:id="@+id/abc"
+        android:layout_below="@+id/seasons"
+        android:layout_toEndOf="@+id/animal" />
 
-
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:scaleType="fitXY"
+        android:background="@null"
+        android:src="@drawable/home"
+        android:onClick="home"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/imageView" />
 </RelativeLayout>
