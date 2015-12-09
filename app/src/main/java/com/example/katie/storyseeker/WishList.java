@@ -7,10 +7,22 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
-public class WishList extends ListActivity {
+
+
+//////////http://stackoverflow.com/questions/31227404/set-long-click-listener-for-listview
+///// this is not going to work for what I got. I tried this type on thing on my branch
+////// KatieList2 but I could not get that working either
+
+
+
+
+public class WishList extends ListActivity{
 
 
     String[] books ={
@@ -18,6 +30,9 @@ public class WishList extends ListActivity {
             "Winter Is",
             "Making a Friend"
     };
+
+    //TextView listview;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +42,21 @@ public class WishList extends ListActivity {
         this.setListAdapter(new ArrayAdapter<String>(
                 this, R.layout.list,
                 R.id.Itemname, books));
+       // TextView listview = (TextView) findViewById(R.id.Itemname);
+
+       // listview.setLongClickable(true);
     }
 
+
+
+   /* public boolean onItemLongClick(AdapterView<?> l, View v,
+                                   final int position, long id) {
+
+        Toast.makeText(this, "long clicked pos: " + position, Toast.LENGTH_LONG).show();
+
+        return true;
+    }
+    */
 
     protected void onListItemClick(ListView l, View v, int position, long id)
     {
@@ -46,6 +74,7 @@ public class WishList extends ListActivity {
             startActivity(intent);
         }
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
