@@ -26,43 +26,23 @@
         </activity>
         <activity
             android:name=".Seasons"
-            android:label="@string/title_activity_seasons"
-            android:parentActivityName=".QuizStart" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.katie.storyseeker.QuizStart" />
+            android:label="@string/title_activity_seasons">
         </activity>
         <activity
             android:name=".Winter"
-            android:label="@string/title_activity_winter"
-            android:parentActivityName=".Seasons" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.katie.storyseeker.Seasons" />
+            android:label="@string/title_activity_winter">
         </activity>
         <activity
             android:name=".Summer"
-            android:label="@string/title_activity_summer"
-            android:parentActivityName=".Seasons" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.katie.storyseeker.Seasons" />
+            android:label="@string/title_activity_summer">
         </activity>
         <activity
             android:name=".Fall"
-            android:label="@string/title_activity_fall"
-            android:parentActivityName=".Seasons" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.katie.storyseeker.Seasons" />
+            android:label="@string/title_activity_fall">
         </activity>
         <activity
             android:name=".Spring"
-            android:label="@string/title_activity_spring"
-            android:parentActivityName=".Seasons" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.katie.storyseeker.Seasons" />
+            android:label="@string/title_activity_spring">
         </activity>
         <activity
             android:name=".SelectedBooks"
@@ -70,7 +50,11 @@
         </activity>
         <activity
             android:name=".WishList"
-            android:label="@string/title_activity_wish_list" >
+            android:label="@string/title_activity_wish_list"
+            android:parentActivityName=".StartScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.katie.storyseeker.StartScreen" />
         </activity>
         <activity
             android:name=".ColdLadyBook"
@@ -83,7 +67,6 @@
         <activity
             android:name=".MakingAFriend"
             android:label="@string/title_activity_making_afriend" >
-
         </activity>
     </application>
 

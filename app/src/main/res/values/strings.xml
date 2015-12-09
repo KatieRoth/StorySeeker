@@ -13,4 +13,5 @@
     <string name="title_activity_cold_lady_book">ColdLadyBook</string>
     <string name="title_activity_winter_is_book">WinterIsBook</string>
     <string name="title_activity_making_afriend">MakingAFriend</string>
+    <string name="title_activity_globals">Globals</string>
 </resources>

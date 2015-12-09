@@ -1,9 +1,11 @@
 package com.example.katie.storyseeker;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class Summer extends AppCompatActivity {
 
@@ -11,6 +13,29 @@ public class Summer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summer);
+    }
+
+    public void activities (View view){
+        Bundle bundle = getIntent().getExtras();
+        int value = bundle.getInt("questionOne");
+        int value2 = bundle.getInt("questionTwo");
+        Intent intent = new Intent(Summer.this, SelectedBooks.class);
+        intent.putExtra("questionOne", value);
+        intent.putExtra("questionTwo", value2);
+        intent.putExtra("questionThree", 2);
+        startActivity(intent);
+
+    }
+
+    public void holidays (View view){
+        Bundle bundle = getIntent().getExtras();
+        int value = bundle.getInt("questionOne");
+        int value2 = bundle.getInt("questionTwo");
+        Intent intent = new Intent(Summer.this, SelectedBooks.class);
+        intent.putExtra("questionOne", value);
+        intent.putExtra("questionTwo", value2);
+        intent.putExtra("questionThree", 1);
+        startActivity(intent);
     }
 
     @Override

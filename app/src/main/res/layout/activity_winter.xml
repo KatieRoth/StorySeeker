@@ -23,6 +23,7 @@
         android:scaleType="fitXY"
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
+        android:onClick="holidays"
         />
     <ImageButton
         android:layout_width="275dp"

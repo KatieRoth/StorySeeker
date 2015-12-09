@@ -12,7 +12,13 @@ import android.widget.ListView;
 
 public class SelectedBooks extends ListActivity {
 
-    String[] books ={
+    String[] winterHolidayBooks = {
+            "How The Grinch Stole Christmas",
+            "The Polar Express",
+            "Happy Valentine's Day, Mouse!"
+    };
+
+    String[] winterActivityBooks ={
             "There Was a Cold Lady Who Swallowed Some Snow!",
             "Winter Is",
             "Making a Friend"
@@ -23,11 +29,25 @@ public class SelectedBooks extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selected_books);
 
-        this.setListAdapter(new ArrayAdapter<String>(
-                this, R.layout.list,
-                R.id.Itemname, books));
-    }
+        Bundle bundle = getIntent().getExtras();
+        int value1 = bundle.getInt("questionOne");
+        int value2 = bundle.getInt("questionTwo");
+        int value3 = bundle.getInt("questionThree");
 
+        if(value1 == 1 && value2 == 1 && value3==2){
+            this.setListAdapter(new ArrayAdapter<String>(
+                    this, R.layout.list,
+                    R.id.Itemname, winterActivityBooks));
+        }
+
+        else{
+            this.setListAdapter(new ArrayAdapter<String>(
+                    this, R.layout.list,
+                    R.id.Itemname, winterHolidayBooks));
+        }
+
+
+    }
     protected void onListItemClick(ListView l, View v, int position, long id)
     {
         super.onListItemClick(l, v, position, id);

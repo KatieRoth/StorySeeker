@@ -1,6 +1,7 @@
 package com.example.katie.storyseeker;
 
 import android.content.Intent;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,6 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 
 public class QuizStart extends AppCompatActivity {
+
+    //Globals var = (Globals)getApplicationContext();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +26,20 @@ public class QuizStart extends AppCompatActivity {
     }
 
     public void seasons(View view){
-        Intent intent = new Intent(this, Seasons.class);
+
+
+        Intent intent = new Intent(QuizStart.this, Seasons.class);
+        intent.putExtra("questionOne", 1);
         startActivity(intent);
+        //Intent intent1 = new Intent(getApplicationContext(),SelectedBooks.class);
+        //Bundle bundle = new Bundle();
+        //Globals g = (Globals)getApplication();
+        //g.setQuestionOne(1);
+        //startActivity(new Intent(this, Seasons.class));
+        //Globals var = (Globals)getApplicationContext();
+        //var.setQuestionOne(1);
+        //Intent intent = new Intent(this, Seasons.class);
+        //startActivity(intent);
     }
 
     @Override

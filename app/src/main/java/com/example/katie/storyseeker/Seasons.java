@@ -9,6 +9,7 @@ import android.view.View;
 
 public class Seasons extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,19 +23,39 @@ public class Seasons extends AppCompatActivity {
         return true;
     }
     public void winter(View view){
-        Intent intent = new Intent(this, Winter.class);
+
+        Bundle bundle = getIntent().getExtras();
+        int value = bundle.getInt("questionOne");
+        Intent intent = new Intent(Seasons.this, Winter.class);
+        intent.putExtra("questionOne", value);
+        intent.putExtra("questionTwo", 1);
         startActivity(intent);
+
     }
     public void spring(View view){
-        Intent intent = new Intent(this, Spring.class);
+
+        Bundle bundle = getIntent().getExtras();
+        int value = bundle.getInt("questionOne");
+        Intent intent = new Intent(Seasons.this, Spring.class);
+        intent.putExtra("questionOne", value);
+        intent.putExtra("questionTwo", 3);
         startActivity(intent);
     }
+
     public void summer(View view){
-        Intent intent = new Intent(this, Summer.class);
+        Bundle bundle = getIntent().getExtras();
+        int value = bundle.getInt("questionOne");
+        Intent intent = new Intent(Seasons.this, Summer.class);
+        intent.putExtra("questionOne", value);
+        intent.putExtra("questionTwo", 2);
         startActivity(intent);
     }
     public void fall(View view){
-        Intent intent = new Intent(this, Fall.class);
+        Bundle bundle = getIntent().getExtras();
+        int value = bundle.getInt("questionOne");
+        Intent intent = new Intent(Seasons.this, Fall.class);
+        intent.putExtra("questionOne", value);
+        intent.putExtra("questionTwo", 4);
         startActivity(intent);
     }
 

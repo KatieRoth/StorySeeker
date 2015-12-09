@@ -150,7 +150,7 @@ public class WishList extends ListActivity{
 
     private class OnClickClass implements View.OnClickListener{
         public void onClick(View v) {
-            //Remove Book 
+            //Remove Book
             pwindo.dismiss();
 
         }

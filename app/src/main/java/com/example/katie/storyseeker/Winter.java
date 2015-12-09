@@ -9,6 +9,8 @@ import android.view.View;
 
 public class Winter extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +25,25 @@ public class Winter extends AppCompatActivity {
     }
 
     public void activities (View view){
-        Intent intent = new Intent(this, SelectedBooks.class);
+        Bundle bundle = getIntent().getExtras();
+        int value = bundle.getInt("questionOne");
+        int value2 = bundle.getInt("questionTwo");
+        Intent intent = new Intent(Winter.this, SelectedBooks.class);
+        intent.putExtra("questionOne", value);
+        intent.putExtra("questionTwo", value2);
+        intent.putExtra("questionThree", 2);
+        startActivity(intent);
+
+    }
+
+    public void holidays (View view){
+        Bundle bundle = getIntent().getExtras();
+        int value = bundle.getInt("questionOne");
+        int value2 = bundle.getInt("questionTwo");
+        Intent intent = new Intent(Winter.this, SelectedBooks.class);
+        intent.putExtra("questionOne", value);
+        intent.putExtra("questionTwo", value2);
+        intent.putExtra("questionThree", 1);
         startActivity(intent);
     }
 

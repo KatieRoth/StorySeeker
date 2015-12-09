@@ -16,7 +16,7 @@
     <ImageButton
         android:layout_width="275dp"
         android:layout_height="275dp"
-        android:src="@drawable/wateringcan"
+        android:src="@drawable/eggs"
         android:id="@+id/springHolidays"
         android:background="@null"
         android:paddingLeft="20dp"
@@ -26,7 +26,7 @@
     <ImageButton
         android:layout_width="275dp"
         android:layout_height="275dp"
-        android:src="@drawable/eggs"
+        android:src="@drawable/wateringcan"
         android:id="@+id/springActivities"
         android:paddingLeft="20dp"
         android:background="@null"
