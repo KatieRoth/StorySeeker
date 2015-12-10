@@ -26,23 +26,23 @@
         </activity>
         <activity
             android:name=".Seasons"
-            android:label="@string/title_activity_seasons">
+            android:label="@string/title_activity_seasons" >
         </activity>
         <activity
             android:name=".Winter"
-            android:label="@string/title_activity_winter">
+            android:label="@string/title_activity_winter" >
         </activity>
         <activity
             android:name=".Summer"
-            android:label="@string/title_activity_summer">
+            android:label="@string/title_activity_summer" >
         </activity>
         <activity
             android:name=".Fall"
-            android:label="@string/title_activity_fall">
+            android:label="@string/title_activity_fall" >
         </activity>
         <activity
             android:name=".Spring"
-            android:label="@string/title_activity_spring">
+            android:label="@string/title_activity_spring" >
         </activity>
         <activity
             android:name=".SelectedBooks"
@@ -67,6 +67,10 @@
         <activity
             android:name=".MakingAFriend"
             android:label="@string/title_activity_making_afriend" >
+        </activity>
+        <activity
+            android:name=".BookDescription"
+            android:label="@string/title_activity_book_description" >
         </activity>
     </application>
 
