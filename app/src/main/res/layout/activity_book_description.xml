@@ -31,25 +31,21 @@
         android:background="@null"
         android:src="@drawable/home"
         android:onClick="home"
-        android:layout_alignBottom="@+id/imageButton"
-        android:layout_toStartOf="@+id/textView" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+
     <ImageButton
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:scaleType="fitXY"
         android:background="@null"
         android:src="@drawable/wishlisticon"
-        android:onClick="wishlist"
-        android:id="@+id/imageButton"
+        android:id="@+id/addToWishList"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add To Wishlist"
-        android:layout_below="@id/textView"
-        android:id="@+id/addToWishList"/>
+
 
 
 </RelativeLayout>

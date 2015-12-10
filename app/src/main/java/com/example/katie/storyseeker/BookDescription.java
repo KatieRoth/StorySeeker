@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,7 +25,7 @@ public class BookDescription extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         bookName = bundle.getString("book");
 
-        final Button addToWishList = (Button) findViewById(R.id.addToWishList);
+        final ImageButton addToWishList = (ImageButton) findViewById(R.id.addToWishList);
         final TextView textOne = (TextView) findViewById(R.id.textView);
 
         addToWishList.setOnClickListener(new View.OnClickListener(){
@@ -238,6 +239,7 @@ public class BookDescription extends AppCompatActivity {
     }
 
     public void addToWishList(View view){
+        Toast.makeText(getApplicationContext(),bookName+" added to your wishlist!", Toast.LENGTH_LONG).show();
         GlobalBook globalBook = new GlobalBook();
         globalBook.setAuthor("author");
         globalBook.setTitle(bookName);
@@ -273,8 +275,5 @@ public class BookDescription extends AppCompatActivity {
     public void home(View view){
         Intent i = new Intent(this, StartScreen.class);
         startActivity(i);
-    }
-    public void wishlist(View view){
-        Toast.makeText(getApplicationContext(),bookName+" added to your wishlist!", Toast.LENGTH_LONG).show();
     }
 }
