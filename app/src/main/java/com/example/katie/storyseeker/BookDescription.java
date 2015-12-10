@@ -148,4 +148,11 @@ public class BookDescription extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    public void home(View view){
+        Intent i = new Intent(this, StartScreen.class);
+        startActivity(i);
+    }
+    public void wishlist(View view){
+        Toast.makeText(getApplicationContext(),bookName+" added to your wishlist!", Toast.LENGTH_LONG).show();
+    }
 }

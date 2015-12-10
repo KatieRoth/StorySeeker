@@ -19,6 +19,7 @@
         android:src="@drawable/pumpkin"
         android:id="@+id/fallHolidays"
         android:background="@null"
+        android:onClick="holidays"
         android:paddingLeft="20dp"
         android:scaleType="fitXY"
         android:layout_centerVertical="true"
@@ -30,6 +31,7 @@
         android:id="@+id/fallActivities"
         android:paddingLeft="20dp"
         android:background="@null"
+        android:onClick="activities"
         android:scaleType="fitXY"
         android:layout_alignTop="@+id/fallHolidays"
         android:layout_toEndOf="@+id/fallHolidays" />
