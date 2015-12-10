@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +28,7 @@ public class BookDescription extends AppCompatActivity {
 
         final ImageButton addToWishList = (ImageButton) findViewById(R.id.addToWishList);
         final TextView textOne = (TextView) findViewById(R.id.textView);
+        final ImageView image = (ImageView) findViewById(R.id.imageView2);
 
         addToWishList.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -120,12 +122,15 @@ public class BookDescription extends AppCompatActivity {
                     "children the representation behind the " +
                     "national flag and the different meanings " +
                     "for different people.' ");
+
         }
         if (bookName.equals("SummerCamp")){
             //The Night Before Summer Camp
             textOne.setText("It's almost time for the first " +
                     "day of summer camp, but one little camper " +
                     "catches a case of the butterflies.");
+
+            image.setImageDrawable(getResources().getDrawable(R.drawable.camp));
         }
         if (bookName.equals("Beach")){
             //Beach Day!
@@ -133,12 +138,14 @@ public class BookDescription extends AppCompatActivity {
                     "to escape the heat, and decide to take " +
                     "a trip to the beach. But they get lost " +
                     "along the way. Will they ever make it?");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.beach));
         }
         if (bookName.equals("FunDog")){
             //Fun Dog, Sun Dog
             textOne.setText("Tinka, a sandy golden retriever, " +
                     "and his best friend and owner spend " +
                     "a busy day at the beach.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.fundog));
         }
         if (bookName.equals("Pumpkin")){
             //Duck & Goose, Find a Pumpkin
@@ -174,6 +181,7 @@ public class BookDescription extends AppCompatActivity {
                     "this time of year fall. The bright illustrations " +
                     "will keep readers intrigued and looking " +
                     "forward to celebrating the new season.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.lovefall));
         }
         if (bookName.equals("LetItFall")){
             //Let It Fall
@@ -182,6 +190,7 @@ public class BookDescription extends AppCompatActivity {
                     "outdoor shots, adorable children, and " +
                     "seasonal activities to teach all about " +
                     "the coming months of autumn.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.letitfall));
         }
         if (bookName.equals("Apples")){
             //Autumn Is for Apples
@@ -190,6 +199,7 @@ public class BookDescription extends AppCompatActivity {
                     " From apple picking to an afternoon picnic, " +
                     "readers explore the seasonal offerings all " +
                     "set to rhyme.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.apples));
         }
         if (bookName.equals("Bunnies")){
             //The Dumb Bunnies Easter

@@ -12,7 +12,7 @@
         android:background="@drawable/animals"
         android:layout_above="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="10dp"
         android:scaleType="fitXY"
         android:id="@+id/imageView2" />
 
