@@ -61,5 +61,14 @@
         android:onClick="fall"
         android:layout_below="@id/summer"
         android:layout_toEndOf="@+id/spring" />
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:scaleType="fitXY"
+        android:background="@null"
+        android:src="@drawable/home"
+        android:onClick="home"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/fall" />
 
 </RelativeLayout>
