@@ -202,19 +202,7 @@ public class SelectedBooks extends Activity {
          //           this, R.layout.list,
          //           R.id.Itemname, fallHolidayBooks));
 
-            CustomList adapter = new
-                    CustomList(SelectedBooks.this, fallHolidayBooks, fallActivityImages);
-            list=(ListView)findViewById(R.id.list);
-            list.setAdapter(adapter);
-            list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view,
-                                        int position, long id) {
-                    Toast.makeText(SelectedBooks.this, "You Clicked at " + fallHolidayBooks[+position], Toast.LENGTH_SHORT).show();
-
-                }
-            });
+       
         }
 
 
