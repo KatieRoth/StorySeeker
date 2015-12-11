@@ -23,7 +23,7 @@
         android:src="@drawable/home"
         android:onClick="home"
         android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/springActivities" />
+        android:layout_alignParentRight="true"/>
 
 </RelativeLayout>
 
