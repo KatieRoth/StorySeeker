@@ -79,6 +79,12 @@ public class SelectedBooks extends Activity {
             "Hurray for Spring!"
     };
 
+    Integer[] tempImages = {
+            R.drawable.puppy,
+            R.drawable.puppy,
+            R.drawable.puppy
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,13 +100,71 @@ public class SelectedBooks extends Activity {
          //   this.setListAdapter(new ArrayAdapter<String>(
          //           this, R.layout.list,
          //           R.id.Itemname, winterActivityBooks));
+            CustomList adapter = new
+                    CustomList(SelectedBooks.this, winterActivityBooks, tempImages);
+            list=(ListView)findViewById(R.id.list);
+            list.setAdapter(adapter);
+            list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view,
+                                        int position, long id) {
+
+                    if (winterActivityBooks[+position].toString() == "There Was a Cold Lady Who Swallowed Some Snow!") {
+                        Intent intent = new Intent(SelectedBooks.this, BookDescription.class);
+                        intent.putExtra("book", "ColdLady");
+                        startActivity(intent);
+                    }
+                    if (winterActivityBooks[+position].toString() == "Winter Is") {
+                        Intent intent = new Intent(SelectedBooks.this, BookDescription.class);
+                        intent.putExtra("book", "WinterIs");
+                        startActivity(intent);
+                    }
+                    if (winterActivityBooks[+position].toString() == "Making a Friend") {
+                        Intent intent = new Intent(SelectedBooks.this, BookDescription.class);
+                        intent.putExtra("book", "MakingAFriend");
+                        startActivity(intent);
+                    }
+                }
+            });
+
         }
 
         if(value1 == 1 && value2 == 1 && value3==1){
          //   this.setListAdapter(new ArrayAdapter<String>(
          //           this, R.layout.list,
          //           R.id.Itemname, winterHolidayBooks));
+                    CustomList adapter = new
+                            CustomList(SelectedBooks.this, winterHolidayBooks, tempImages);
+                    list=(ListView)findViewById(R.id.list);
+                    list.setAdapter(adapter);
+                    list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view,
+                                                int position, long id) {
+
+                            if (winterHolidayBooks[+position].toString() == "How The Grinch Stole Christmas") {
+                                Intent intent = new Intent(SelectedBooks.this, BookDescription.class);
+                                intent.putExtra("book", "Grinch");
+                                startActivity(intent);
+                            }
+                            if (winterHolidayBooks[+position].toString() == "The Polar Express") {
+                                Intent intent = new Intent(SelectedBooks.this, BookDescription.class);
+                                intent.putExtra("book", "PolarExpress");
+                                startActivity(intent);
+                            }
+                            if (winterHolidayBooks[+position].toString() == "Happy Valentine's Day, Mouse!") {
+                                Intent intent = new Intent(SelectedBooks.this, BookDescription.class);
+                                intent.putExtra("book", "Valentines");
+                                startActivity(intent);
+                            }
+                        }
+                    });
+
         }
+
+
         if(value1 == 1 && value2 == 2 && value3==2){
          //   this.setListAdapter(new ArrayAdapter<String>(
          //           this, R.layout.list,
@@ -139,28 +203,110 @@ public class SelectedBooks extends Activity {
          //   this.setListAdapter(new ArrayAdapter<String>(
          //           this, R.layout.list,
          //           R.id.Itemname, summerHolidayBooks));
-        }
-        if(value1 == 1 && value2 == 1 && value3==2){
-          //  this.setListAdapter(new ArrayAdapter<String>(
-          //          this, R.layout.list,
-          //          R.id.Itemname, winterActivityBooks));
+
+            CustomList adapter = new
+                    CustomList(SelectedBooks.this, summerHolidayBooks, tempImages);
+            list=(ListView)findViewById(R.id.list);
+            list.setAdapter(adapter);
+            list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view,
+                                        int position, long id) {
+
+                    if (summerHolidayBooks[+position].toString()== "Fourth of July Mice") {
+                        Intent intent = new Intent(SelectedBooks.this, BookDescription.class);
+                        intent.putExtra("book", "FourthOfJuly");
+                        startActivity(intent);
+                    }
+                    if (summerHolidayBooks[+position].toString()== "Froggy's Day with Dad") {
+                        Intent intent = new Intent(SelectedBooks.this, BookDescription.class);
+                        intent.putExtra("book","Froggy");
+                        startActivity(intent);
+                    }
+                    if (summerHolidayBooks[+position].toString()== "A Flag for All") {
+                        Intent intent = new Intent(SelectedBooks.this, BookDescription.class);
+                        intent.putExtra("book", "Flag");
+                        startActivity(intent);
+                    }
+                }
+            });
+
+
         }
 
-        if(value1 == 1 && value2 == 1 && value3==1){
-         //   this.setListAdapter(new ArrayAdapter<String>(
-         //           this, R.layout.list,
-         //           R.id.Itemname, winterHolidayBooks));
-        }
+
         if(value1 == 1 && value2 == 3 && value3==2){
          //   this.setListAdapter(new ArrayAdapter<String>(
          //           this, R.layout.list,
          //           R.id.Itemname, springActivityBooks));
+
+            CustomList adapter = new
+                    CustomList(SelectedBooks.this, springActivityBooks, tempImages);
+            list=(ListView)findViewById(R.id.list);
+            list.setAdapter(adapter);
+            list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view,
+                                        int position, long id) {
+
+                    if (springActivityBooks[+position].toString()== "And Then It's Spring") {
+                        Intent intent = new Intent(SelectedBooks.this, BookDescription.class);
+                        intent.putExtra("book", "Spring");
+                        startActivity(intent);
+                    }
+                    if (springActivityBooks[+position].toString()== "Let It Rain") {
+                        Intent intent = new Intent(SelectedBooks.this, BookDescription.class);
+                        intent.putExtra("book","Rain");
+                        startActivity(intent);
+                    }
+                    if (springActivityBooks[+position].toString()== "Hurray for Spring!") {
+                        Intent intent = new Intent(SelectedBooks.this, BookDescription.class);
+                        intent.putExtra("book", "Hurray");
+                        startActivity(intent);
+                    }
+                }
+            });
+
         }
+
 
         if(value1 == 1 && value2 == 3 && value3==1){
          //   this.setListAdapter(new ArrayAdapter<String>(
          //           this, R.layout.list,
           //          R.id.Itemname, springHolidayBooks));
+
+
+            CustomList adapter = new
+                    CustomList(SelectedBooks.this, springHolidayBooks, tempImages);
+            list=(ListView)findViewById(R.id.list);
+            list.setAdapter(adapter);
+            list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view,
+                                        int position, long id) {
+
+                    if (springHolidayBooks[+position].toString()== "The Dumb Bunnies Easter") {
+                        Intent intent = new Intent(SelectedBooks.this, BookDescription.class);
+                        intent.putExtra("book", "Bunnies");
+                        startActivity(intent);
+                    }
+                    if (springHolidayBooks[+position].toString()== "April Fool!") {
+                        Intent intent = new Intent(SelectedBooks.this, BookDescription.class);
+                        intent.putExtra("book","AprilFool");
+                        startActivity(intent);
+                    }
+                    if (springHolidayBooks[+position].toString()== "Fancy Nancy's Marvelous Mother's Day Brunch") {
+                        Intent intent = new Intent(SelectedBooks.this, BookDescription.class);
+                        intent.putExtra("book", "Brunch");
+                        startActivity(intent);
+                    }
+                }
+            });
+
+
         }
         if(value1 == 1 && value2 == 4 && value3==2){
           //  this.setListAdapter(new ArrayAdapter<String>(
@@ -197,12 +343,42 @@ public class SelectedBooks extends Activity {
             });
         }
 
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
         if(value1 == 1 && value2 == 4 && value3==1){
          //   this.setListAdapter(new ArrayAdapter<String>(
          //           this, R.layout.list,
          //           R.id.Itemname, fallHolidayBooks));
 
-       
+            CustomList adapter = new
+                    CustomList(SelectedBooks.this, fallHolidayBooks, tempImages);
+            list=(ListView)findViewById(R.id.list);
+            list.setAdapter(adapter);
+            list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view,
+                                        int position, long id) {
+
+                    if (fallHolidayBooks[+position].toString()== "Duck & Goose, Find a Pumpkin") {
+                        Intent intent = new Intent(SelectedBooks.this, BookDescription.class);
+                        intent.putExtra("book", "Pumpkin");
+                        startActivity(intent);
+                    }
+                    if (fallHolidayBooks[+position].toString()== "Milly and the Macy's Parade") {
+                        Intent intent = new Intent(SelectedBooks.this, BookDescription.class);
+                        intent.putExtra("book","Parade");
+                        startActivity(intent);
+                    }
+                    if (fallHolidayBooks[+position].toString()== "The Hallo-Wiener") {
+                        Intent intent = new Intent(SelectedBooks.this, BookDescription.class);
+                        intent.putExtra("book", "Wiener");
+                        startActivity(intent);
+                    }
+                }
+            });
+
+
         }
 
 
