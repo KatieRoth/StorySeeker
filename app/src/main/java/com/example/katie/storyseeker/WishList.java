@@ -46,7 +46,7 @@ public class WishList extends ListActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        books.add("Winter Is");
+      /*  books.add("Winter Is");
         setListAdapter(new ArrayAdapter<String>(this, R.layout.list, R.id.Itemname, books));
         ListView lv = getListView();
         lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
@@ -73,7 +73,9 @@ public class WishList extends ListActivity{
             }
         });
 
+*/
     }
+
 
 
    /* public boolean onItemLongClick(AdapterView<?> l, View v,
