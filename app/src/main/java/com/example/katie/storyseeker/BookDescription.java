@@ -48,6 +48,8 @@ public class BookDescription extends AppCompatActivity {
                     "The lively ad hilarious book will keep " +
                     "children on their toes with a surprise " +
                     "ending that will leave them begging for more.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.acoldlady));
+
         }
         if (bookName.equals("WinterIs")) {
             //Winter is
@@ -58,6 +60,8 @@ public class BookDescription extends AppCompatActivity {
                     "that winter has to offer. Illustrated " +
                     "in water color, Dixon's celebration of " +
                     "Winter is perfect for tuck-in time.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.winteris));
+
         }
         if (bookName.equals("MakingAFriend")){
             //Making a Friend
@@ -73,6 +77,9 @@ public class BookDescription extends AppCompatActivity {
                     "is build a snowman. But what happens when the " +
                     "snow melts? Read more to see how this young boy " +
                     "stays connected to his snowy pal forever.");
+
+            image.setImageDrawable(getResources().getDrawable(R.drawable.makingfriend));
+
         }
         if (bookName.equals("Grinch")){
             //How The Grinch Stole Christmas
@@ -82,6 +89,8 @@ public class BookDescription extends AppCompatActivity {
                     "' Dr. Seuss' classic christmas-time book is " +
                     "a traditional story that both young and old " +
                     "continue to love and cherrish.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.grinchstolechristmas));
+
         }
         if (bookName.equals("PolarExpress")) {
             //The Polar Express
@@ -90,12 +99,15 @@ public class BookDescription extends AppCompatActivity {
                     "North Pole with Santa. The mysterious " +
                     "journey is a beloved classic, destine to " +
                     "get every child excited for the holidays.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.polarexpress));
         }
         if (bookName.equals("Valentines")) {
             //Happy Valentine's Day, Mouse!
             textOne.setText("From the author of 'If You Give a " +
                     "Mouse a Cookie, mouse and his friends " +
                     "celebrate the loving holiday of chocolate and cards.' ");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.valentinesdaymouse));
+
         }
 
         if (bookName.equals("FourthOfJuly")) {
@@ -106,6 +118,8 @@ public class BookDescription extends AppCompatActivity {
                     "The watercolor illustrations and rhyming " +
                     "help depict the celebratory rituals of " +
                     "Independence day.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.mice));
+
         }
         if (bookName.equals("Froggy")){
             //Froggy's Day with Dad
@@ -113,6 +127,9 @@ public class BookDescription extends AppCompatActivity {
                     "day by a golf outing, but when little " +
                     "froggy hits his dad with a club it seems " +
                     "like the day couldn't get any worse.");
+
+            image.setImageDrawable(getResources().getDrawable(R.drawable.froggysdaywithdad));
+
         }
         if (bookName.equals("Flag")){
             //A Flag for All
@@ -122,6 +139,8 @@ public class BookDescription extends AppCompatActivity {
                     "children the representation behind the " +
                     "national flag and the different meanings " +
                     "for different people.' ");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.flagforall));
+
 
         }
         if (bookName.equals("SummerCamp")){
@@ -156,6 +175,8 @@ public class BookDescription extends AppCompatActivity {
                     "by NY Times Best Seller, Tad Hils, readers " +
                     "will love the autumn-colored oil painting " +
                     "illustrations.");
+
+            image.setImageDrawable(getResources().getDrawable(R.drawable.duckandgoose));
         }
         if (bookName.equals("Parade")){
             //Milly and the Macy's Parade
@@ -164,6 +185,8 @@ public class BookDescription extends AppCompatActivity {
                     "the holiday seasons kicks off. Hoping to mix " +
                     "her old traditions with the new, Milly " +
                     "reaches out to Mr. Macy to bring the two together.");
+
+            image.setImageDrawable(getResources().getDrawable(R.drawable.milly));
         }
         if (bookName.equals("Wiener")){
             //The Hallo-Wiener
@@ -173,6 +196,8 @@ public class BookDescription extends AppCompatActivity {
                     " season, the jokes come at full-swing as he" +
                     " dresses up as a hot dog. Oscar channels" +
                     " the negativity into courage and becomes a Grade-A hero.");
+
+            image.setImageDrawable(getResources().getDrawable(R.drawable.thehallowiener));
         }
         if (bookName.equals("LovesFall")){
             //Who Loves the Fall?
@@ -207,12 +232,18 @@ public class BookDescription extends AppCompatActivity {
                     " comes an Easter bestseller about the dumb " +
                     "bunnies who actually are celebrating Christmas. " +
                     "The goofy tale is a fun read for all.");
+
+            image.setImageDrawable(getResources().getDrawable(R.drawable.bunnieseaster));
+
         }
         if (bookName.equals("AprilFool")){
             //April Fool!
             textOne.setText("Harry the cat, his little sister " +
                     "Emily, and their parents all play tricks " +
                     "on each other for April Fools' Day.");
+
+            image.setImageDrawable(getResources().getDrawable(R.drawable.aprilfool));
+
         }
         if (bookName.equals("Brunch")){
             //Fancy Nancy's Marvelous Mother's Day Brunch
@@ -221,6 +252,9 @@ public class BookDescription extends AppCompatActivity {
                     " Illustrated with thirteen flaps, readers " +
                     "can see all the surprises Nancy plans in " +
                     "order to make the day special.");
+
+            image.setImageDrawable(getResources().getDrawable(R.drawable.fancynancy));
+
         }
         if (bookName.equals("Spring")){
             //And Then It's Spring
@@ -229,6 +263,8 @@ public class BookDescription extends AppCompatActivity {
                     " to sprout a garden. The story is " +
                     "brought to life with beautiful illustrations" +
                     " and teaches the importance of patience.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.itsspring));
+
         }
         if (bookName.equals("Rain")){
             //Let It Rain
@@ -237,6 +273,8 @@ public class BookDescription extends AppCompatActivity {
                     " to kicking around a soccer ball. " +
                     "The light-hearted picture book is a perfect " +
                     "celebration of springtime.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.rain));
+
         }
         if (bookName.equals("Hurray")) {
             //Hurray For Spring
@@ -244,12 +282,15 @@ public class BookDescription extends AppCompatActivity {
                     "to spring. The sensory trip of spring " +
                     "activities will get all who are reading " +
                     "excited for the new season.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.hurrayspring));
         }
+
+
 
     }
 
     public void addToWishList(View view){
-        Toast.makeText(getApplicationContext(),bookName+" added to your wishlist!", Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(),bookName+" added to your wishlist!", Toast.LENGTH_LONG).show();
         GlobalBook globalBook = new GlobalBook();
         globalBook.setAuthor("author");
         globalBook.setTitle(bookName);

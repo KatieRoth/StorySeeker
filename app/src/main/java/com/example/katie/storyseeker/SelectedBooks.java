@@ -24,16 +24,35 @@ public class SelectedBooks extends Activity {
             "Happy Valentine's Day, Mouse!"
     };
 
+    Integer[] winterHolidayImages = {
+            R.drawable.grinchstolechristmas,
+            R.drawable.polarexpress,
+            R.drawable.valentinesdaymouse
+    };
+
     String[] winterActivityBooks ={
             "There Was a Cold Lady Who Swallowed Some Snow!",
             "Winter Is",
             "Making a Friend"
     };
 
+    Integer[] winterActivityImages = {
+            R.drawable.acoldlady,
+            R.drawable.winteris,
+            R.drawable.makingfriend
+    };
+
+
     String[] summerHolidayBooks = {
             "Fourth of July Mice",
             "Froggy's Day with Dad",
             "A Flag for All"
+    };
+
+    Integer[] summerHolidayImages = {
+            R.drawable.mice,
+            R.drawable.froggysdaywithdad,
+            R.drawable.flagforall
     };
 
     String[] summerActivityBooks ={
@@ -54,6 +73,13 @@ public class SelectedBooks extends Activity {
             "The Hallo-Wiener"
     };
 
+    Integer[] fallHolidayImages = {
+            R.drawable.duckandgoose,
+            R.drawable.milly,
+            R.drawable.thehallowiener
+    };
+
+
 
     String[] fallActivityBooks ={
             "Who Loves the Fall?",
@@ -73,16 +99,22 @@ public class SelectedBooks extends Activity {
             "Fancy Nancy's Marvelous Mother's Day Brunch"
     };
 
+    Integer[] springHolidayImages = {
+            R.drawable.bunnieseaster,
+            R.drawable.aprilfool,
+            R.drawable.fancynancy
+    };
+
     String[] springActivityBooks ={
             "And Then It's Spring",
             "Let It Rain",
             "Hurray for Spring!"
     };
 
-    Integer[] tempImages = {
-            R.drawable.puppy,
-            R.drawable.puppy,
-            R.drawable.puppy
+    Integer[] springActivityImages = {
+            R.drawable.itsspring,
+            R.drawable.rain,
+            R.drawable.hurrayspring
     };
 
 
@@ -101,7 +133,7 @@ public class SelectedBooks extends Activity {
             //           this, R.layout.list,
             //           R.id.Itemname, winterActivityBooks));
             CustomList adapter = new
-                    CustomList(SelectedBooks.this, winterActivityBooks, tempImages);
+                    CustomList(SelectedBooks.this, winterActivityBooks, winterActivityImages);
             list=(ListView)findViewById(R.id.list);
             list.setAdapter(adapter);
             list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -135,7 +167,7 @@ public class SelectedBooks extends Activity {
             //           this, R.layout.list,
             //           R.id.Itemname, winterHolidayBooks));
             CustomList adapter = new
-                    CustomList(SelectedBooks.this, winterHolidayBooks, tempImages);
+                    CustomList(SelectedBooks.this, winterHolidayBooks, winterHolidayImages);
             list=(ListView)findViewById(R.id.list);
             list.setAdapter(adapter);
             list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -205,7 +237,7 @@ public class SelectedBooks extends Activity {
             //           R.id.Itemname, summerHolidayBooks));
 
             CustomList adapter = new
-                    CustomList(SelectedBooks.this, summerHolidayBooks, tempImages);
+                    CustomList(SelectedBooks.this, summerHolidayBooks, summerHolidayImages);
             list=(ListView)findViewById(R.id.list);
             list.setAdapter(adapter);
             list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -242,7 +274,7 @@ public class SelectedBooks extends Activity {
             //           R.id.Itemname, springActivityBooks));
 
             CustomList adapter = new
-                    CustomList(SelectedBooks.this, springActivityBooks, tempImages);
+                    CustomList(SelectedBooks.this, springActivityBooks, springActivityImages);
             list=(ListView)findViewById(R.id.list);
             list.setAdapter(adapter);
             list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -279,7 +311,7 @@ public class SelectedBooks extends Activity {
 
 
             CustomList adapter = new
-                    CustomList(SelectedBooks.this, springHolidayBooks, tempImages);
+                    CustomList(SelectedBooks.this, springHolidayBooks, springHolidayImages);
             list=(ListView)findViewById(R.id.list);
             list.setAdapter(adapter);
             list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -351,7 +383,7 @@ public class SelectedBooks extends Activity {
             //           R.id.Itemname, fallHolidayBooks));
 
             CustomList adapter = new
-                    CustomList(SelectedBooks.this, fallHolidayBooks, tempImages);
+                    CustomList(SelectedBooks.this, fallHolidayBooks, fallHolidayImages);
             list=(ListView)findViewById(R.id.list);
             list.setAdapter(adapter);
             list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
