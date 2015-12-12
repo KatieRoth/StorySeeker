@@ -27,17 +27,24 @@ public class BookDescription extends AppCompatActivity {
         bookName = bundle.getString("book");
 
         final ImageButton addToWishList = (ImageButton) findViewById(R.id.addToWishList);
-        final TextView textOne = (TextView) findViewById(R.id.textView);
+        final TextView textOne = (TextView) findViewById(R.id.textView2);
         final ImageView image = (ImageView) findViewById(R.id.imageView2);
+        final TextView title = (TextView) findViewById(R.id.textView);
+        final TextView author = (TextView) findViewById(R.id.textView1);
 
-        addToWishList.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
+
+
+        addToWishList.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
                 addToWishList(v);
             }
         });
 
         if (bookName.equals("ColdLady")) {
             //"There Was a Cold Lady Who Swallowed Some Snow!"
+            title.setText("There Was a Cold Lady Who Swallowed Some Snow!");
+            author.setText("Lucille Colandro");
+
             textOne.setText("A snowy take on the traditional " +
                     "'There Was an Old Lady Who Swalloed A Fly,' " +
                     "Lucille Colandro uses rhymes and beautiful " +
@@ -53,6 +60,9 @@ public class BookDescription extends AppCompatActivity {
         }
         else if (bookName.equals("WinterIs")) {
             //Winter is
+            title.setText("Winter is");
+            author.setText("Ann Dixon");
+
             textOne.setText("From sledding to skating and " +
                     "hot cocoa to gingerbread, winter is " +
                     "so many things. Inside Ann Dixon's " +
@@ -65,6 +75,9 @@ public class BookDescription extends AppCompatActivity {
         }
         else if (bookName.equals("MakingAFriend")){
             //Making a Friend
+            title.setText("Making a Friend");
+            author.setText("Alison McGhee");
+
             textOne.setText("Winter is more than cool temperatures," +
                     " but the joys of making lasting friendships. " +
                     "When the snow hits the ground, the first thing " +
@@ -83,6 +96,9 @@ public class BookDescription extends AppCompatActivity {
         }
         else if (bookName.equals("Grinch")){
             //How The Grinch Stole Christmas
+            title.setText("How The Grinch Stole Christmas");
+            author.setText("Dr. Seuss");
+
             textOne.setText(" 'The Grinch hated Christmas! " +
                     "The whole Christmas season! Now, please " +
                     "don't ask why. No one quite knows the reason." +
@@ -94,6 +110,9 @@ public class BookDescription extends AppCompatActivity {
         }
         else if (bookName.equals("PolarExpress")) {
             //The Polar Express
+            title.setText("The Polar Express");
+            author.setText("Chris Van Allsburg");
+
             textOne.setText("Lying awake on Christmas eve, " +
                     "a young boy is swept away to visit the " +
                     "North Pole with Santa. The mysterious " +
@@ -101,8 +120,12 @@ public class BookDescription extends AppCompatActivity {
                     "get every child excited for the holidays.");
             image.setImageDrawable(getResources().getDrawable(R.drawable.polarexpress));
         }
+
         else if (bookName.equals("Valentines")) {
             //Happy Valentine's Day, Mouse!
+            title.setText("Happy Valentine's Day, Mouse!");
+            author.setText("Laura Numeroff");
+
             textOne.setText("From the author of 'If You Give a " +
                     "Mouse a Cookie, mouse and his friends " +
                     "celebrate the loving holiday of chocolate and cards.' ");
@@ -112,6 +135,9 @@ public class BookDescription extends AppCompatActivity {
 
         else if (bookName.equals("FourthOfJuly")) {
             //Fourth of July Mice
+            title.setText("Fourth of July Mice");
+            author.setText("Bethany Roberts ");
+
             textOne.setText("Four little mice fill their " +
                     "patriotic day with traditonal activities " +
                     "like parades, fireworks, and swimming. " +
@@ -123,6 +149,9 @@ public class BookDescription extends AppCompatActivity {
         }
         else if (bookName.equals("Froggy")){
             //Froggy's Day with Dad
+            title.setText("Froggy's Day with Dad");
+            author.setText("Jonathan London");
+
             textOne.setText("Froggy wants to celebrate Father's " +
                     "day by a golf outing, but when little " +
                     "froggy hits his dad with a club it seems " +
@@ -133,6 +162,9 @@ public class BookDescription extends AppCompatActivity {
         }
         else if (bookName.equals("Flag")){
             //A Flag for All
+            title.setText("A Flag for All");
+            author.setText("Larry Dane Brimner");
+
             textOne.setText("The American Flag is filled with " +
                     "stars and stripes, but what do they " +
                     "actually mean? 'A Flag for All teaches " +
@@ -145,6 +177,9 @@ public class BookDescription extends AppCompatActivity {
         }
         else if (bookName.equals("SummerCamp")){
             //The Night Before Summer Camp
+            title.setText("The Night Before Summer Camp");
+            author.setText("Natasha Wing");
+
             textOne.setText("It's almost time for the first " +
                     "day of summer camp, but one little camper " +
                     "catches a case of the butterflies.");
@@ -153,6 +188,9 @@ public class BookDescription extends AppCompatActivity {
         }
         else if (bookName.equals("Beach")){
             //Beach Day!
+            title.setText("Beach Day!");
+            author.setText("Patricia Lakin");
+
             textOne.setText("Four alligator friends want " +
                     "to escape the heat, and decide to take " +
                     "a trip to the beach. But they get lost " +
@@ -161,6 +199,9 @@ public class BookDescription extends AppCompatActivity {
         }
         else if (bookName.equals("FunDog")){
             //Fun Dog, Sun Dog
+            title.setText("Fun Dog, Sun Dog");
+            author.setText("Deborah Heiligman");
+
             textOne.setText("Tinka, a sandy golden retriever, " +
                     "and his best friend and owner spend " +
                     "a busy day at the beach.");
@@ -168,6 +209,9 @@ public class BookDescription extends AppCompatActivity {
         }
         if (bookName.equals("Pumpkin")){
             //Duck & Goose, Find a Pumpkin
+            title.setText("Duck & Goose, Find a Pumpkin");
+            author.setText("Tad Hills ");
+
             textOne.setText("Duck and Goose want to find a " +
                     "pumpkin just like their friend Thistle. " +
                     "So the two set out on a mission looking " +
@@ -180,6 +224,9 @@ public class BookDescription extends AppCompatActivity {
         }
         else if (bookName.equals("Parade")){
             //Milly and the Macy's Parade
+            title.setText("Milly and the Macy's Parade");
+            author.setText("Shana Corey");
+
             textOne.setText("Milly lives in NYC, but her immigrant " +
                     "family longs for their polish traditions as " +
                     "the holiday seasons kicks off. Hoping to mix " +
@@ -190,6 +237,9 @@ public class BookDescription extends AppCompatActivity {
         }
         else if (bookName.equals("Wiener")){
             //The Hallo-Wiener
+            title.setText("The Hallo-Wiener");
+            author.setText("Dav Pilkey");
+
             textOne.setText("Oscar the Doschand is short like " +
                     "other dogs his type, but his friends often" +
                     " ridicule him. When it's time for Halloween" +
@@ -201,6 +251,9 @@ public class BookDescription extends AppCompatActivity {
         }
         if (bookName.equals("LovesFall")){
             //Who Loves the Fall?
+            title.setText("Who Loves the Fall?");
+            author.setText("Bob Raczka");
+
             textOne.setText("Set to rhyme, Bob Razca shares all " +
                     "the special changes in nature that make " +
                     "this time of year fall. The bright illustrations " +
@@ -210,6 +263,9 @@ public class BookDescription extends AppCompatActivity {
         }
         else if (bookName.equals("LetItFall")){
             //Let It Fall
+            title.setText("Let It Fall");
+            author.setText("Maryann Cocca-Leffler");
+
             textOne.setText("A short, easy reader to get into " +
                     "the autumn spirit. The book features beautiful " +
                     "outdoor shots, adorable children, and " +
@@ -219,6 +275,9 @@ public class BookDescription extends AppCompatActivity {
         }
         else if (bookName.equals("Apples")){
             //Autumn Is for Apples
+            title.setText("Autumn Is for Apples");
+            author.setText("Michelle Knudsen");
+
             textOne.setText("Michelle Knudsen's simple story is " +
                     "perfect for kids to use their imagination." +
                     " From apple picking to an afternoon picnic, " +
@@ -228,6 +287,9 @@ public class BookDescription extends AppCompatActivity {
         }
         else if (bookName.equals("Bunnies")){
             //The Dumb Bunnies Easter
+            title.setText("The Dumb Bunnies Easter");
+            author.setText("Dav Pilkey");
+
             textOne.setText("The humurous mind of Dav Pilkey" +
                     " comes an Easter bestseller about the dumb " +
                     "bunnies who actually are celebrating Christmas. " +
@@ -238,6 +300,9 @@ public class BookDescription extends AppCompatActivity {
         }
         else if (bookName.equals("AprilFool")){
             //April Fool!
+            title.setText("April Fool!");
+            author.setText("Karen Gray Ruelle");
+
             textOne.setText("Harry the cat, his little sister " +
                     "Emily, and their parents all play tricks " +
                     "on each other for April Fools' Day.");
@@ -247,6 +312,9 @@ public class BookDescription extends AppCompatActivity {
         }
         else if (bookName.equals("Brunch")){
             //Fancy Nancy's Marvelous Mother's Day Brunch
+            title.setText("Fancy Nancy's Marvelous Mother's Day Brunch");
+            author.setText("Jane O'Connor");
+
             textOne.setText("Nancy wants to plan the best Mother's" +
                     " day yet, so she's pulling out all the stops." +
                     " Illustrated with thirteen flaps, readers " +
@@ -258,6 +326,9 @@ public class BookDescription extends AppCompatActivity {
         }
         else if (bookName.equals("Spring")){
             //And Then It's Spring
+            title.setText("And Then It's Spring");
+            author.setText("Julie Fogliano");
+
             textOne.setText("After a snowy winter, a boy " +
                     "and his dog dig, and dig, and dig hoping" +
                     " to sprout a garden. The story is " +
@@ -268,6 +339,9 @@ public class BookDescription extends AppCompatActivity {
         }
        else if (bookName.equals("Rain")){
             //Let It Rain
+            title.setText("Let It Rain");
+            author.setText("Maryann Cocca-Leffler ");
+
             textOne.setText("Three young kids and their dog " +
                     "try all the spring activities from gardening" +
                     " to kicking around a soccer ball. " +
@@ -278,6 +352,9 @@ public class BookDescription extends AppCompatActivity {
         }
         else if (bookName.equals("Hurray")) {
             //Hurray For Spring
+            title.setText("Hurray For Spring");
+            author.setText("Patricia Hubbell");
+
             textOne.setText("Patricia Hubbell's book is an anthem " +
                     "to spring. The sensory trip of spring " +
                     "activities will get all who are reading " +
