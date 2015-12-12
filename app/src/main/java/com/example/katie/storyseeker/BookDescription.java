@@ -51,7 +51,7 @@ public class BookDescription extends AppCompatActivity {
             image.setImageDrawable(getResources().getDrawable(R.drawable.acoldlady));
 
         }
-        if (bookName.equals("WinterIs")) {
+        else if (bookName.equals("WinterIs")) {
             //Winter is
             textOne.setText("From sledding to skating and " +
                     "hot cocoa to gingerbread, winter is " +
@@ -63,7 +63,7 @@ public class BookDescription extends AppCompatActivity {
             image.setImageDrawable(getResources().getDrawable(R.drawable.winteris));
 
         }
-        if (bookName.equals("MakingAFriend")){
+        else if (bookName.equals("MakingAFriend")){
             //Making a Friend
             textOne.setText("Winter is more than cool temperatures," +
                     " but the joys of making lasting friendships. " +
@@ -81,7 +81,7 @@ public class BookDescription extends AppCompatActivity {
             image.setImageDrawable(getResources().getDrawable(R.drawable.makingfriend));
 
         }
-        if (bookName.equals("Grinch")){
+        else if (bookName.equals("Grinch")){
             //How The Grinch Stole Christmas
             textOne.setText(" 'The Grinch hated Christmas! " +
                     "The whole Christmas season! Now, please " +
@@ -92,7 +92,7 @@ public class BookDescription extends AppCompatActivity {
             image.setImageDrawable(getResources().getDrawable(R.drawable.grinchstolechristmas));
 
         }
-        if (bookName.equals("PolarExpress")) {
+        else if (bookName.equals("PolarExpress")) {
             //The Polar Express
             textOne.setText("Lying awake on Christmas eve, " +
                     "a young boy is swept away to visit the " +
@@ -101,7 +101,7 @@ public class BookDescription extends AppCompatActivity {
                     "get every child excited for the holidays.");
             image.setImageDrawable(getResources().getDrawable(R.drawable.polarexpress));
         }
-        if (bookName.equals("Valentines")) {
+        else if (bookName.equals("Valentines")) {
             //Happy Valentine's Day, Mouse!
             textOne.setText("From the author of 'If You Give a " +
                     "Mouse a Cookie, mouse and his friends " +
@@ -110,7 +110,7 @@ public class BookDescription extends AppCompatActivity {
 
         }
 
-        if (bookName.equals("FourthOfJuly")) {
+        else if (bookName.equals("FourthOfJuly")) {
             //Fourth of July Mice
             textOne.setText("Four little mice fill their " +
                     "patriotic day with traditonal activities " +
@@ -121,7 +121,7 @@ public class BookDescription extends AppCompatActivity {
             image.setImageDrawable(getResources().getDrawable(R.drawable.mice));
 
         }
-        if (bookName.equals("Froggy")){
+        else if (bookName.equals("Froggy")){
             //Froggy's Day with Dad
             textOne.setText("Froggy wants to celebrate Father's " +
                     "day by a golf outing, but when little " +
@@ -131,7 +131,7 @@ public class BookDescription extends AppCompatActivity {
             image.setImageDrawable(getResources().getDrawable(R.drawable.froggysdaywithdad));
 
         }
-        if (bookName.equals("Flag")){
+        else if (bookName.equals("Flag")){
             //A Flag for All
             textOne.setText("The American Flag is filled with " +
                     "stars and stripes, but what do they " +
@@ -143,7 +143,7 @@ public class BookDescription extends AppCompatActivity {
 
 
         }
-        if (bookName.equals("SummerCamp")){
+        else if (bookName.equals("SummerCamp")){
             //The Night Before Summer Camp
             textOne.setText("It's almost time for the first " +
                     "day of summer camp, but one little camper " +
@@ -151,7 +151,7 @@ public class BookDescription extends AppCompatActivity {
 
             image.setImageDrawable(getResources().getDrawable(R.drawable.camp));
         }
-        if (bookName.equals("Beach")){
+        else if (bookName.equals("Beach")){
             //Beach Day!
             textOne.setText("Four alligator friends want " +
                     "to escape the heat, and decide to take " +
@@ -159,7 +159,7 @@ public class BookDescription extends AppCompatActivity {
                     "along the way. Will they ever make it?");
             image.setImageDrawable(getResources().getDrawable(R.drawable.beach));
         }
-        if (bookName.equals("FunDog")){
+        else if (bookName.equals("FunDog")){
             //Fun Dog, Sun Dog
             textOne.setText("Tinka, a sandy golden retriever, " +
                     "and his best friend and owner spend " +
@@ -178,7 +178,7 @@ public class BookDescription extends AppCompatActivity {
 
             image.setImageDrawable(getResources().getDrawable(R.drawable.duckandgoose));
         }
-        if (bookName.equals("Parade")){
+        else if (bookName.equals("Parade")){
             //Milly and the Macy's Parade
             textOne.setText("Milly lives in NYC, but her immigrant " +
                     "family longs for their polish traditions as " +
@@ -188,7 +188,7 @@ public class BookDescription extends AppCompatActivity {
 
             image.setImageDrawable(getResources().getDrawable(R.drawable.milly));
         }
-        if (bookName.equals("Wiener")){
+        else if (bookName.equals("Wiener")){
             //The Hallo-Wiener
             textOne.setText("Oscar the Doschand is short like " +
                     "other dogs his type, but his friends often" +
@@ -208,7 +208,7 @@ public class BookDescription extends AppCompatActivity {
                     "forward to celebrating the new season.");
             image.setImageDrawable(getResources().getDrawable(R.drawable.lovefall));
         }
-        if (bookName.equals("LetItFall")){
+        else if (bookName.equals("LetItFall")){
             //Let It Fall
             textOne.setText("A short, easy reader to get into " +
                     "the autumn spirit. The book features beautiful " +
@@ -217,7 +217,7 @@ public class BookDescription extends AppCompatActivity {
                     "the coming months of autumn.");
             image.setImageDrawable(getResources().getDrawable(R.drawable.letitfall));
         }
-        if (bookName.equals("Apples")){
+        else if (bookName.equals("Apples")){
             //Autumn Is for Apples
             textOne.setText("Michelle Knudsen's simple story is " +
                     "perfect for kids to use their imagination." +
@@ -226,7 +226,7 @@ public class BookDescription extends AppCompatActivity {
                     "set to rhyme.");
             image.setImageDrawable(getResources().getDrawable(R.drawable.apples));
         }
-        if (bookName.equals("Bunnies")){
+        else if (bookName.equals("Bunnies")){
             //The Dumb Bunnies Easter
             textOne.setText("The humurous mind of Dav Pilkey" +
                     " comes an Easter bestseller about the dumb " +
@@ -236,7 +236,7 @@ public class BookDescription extends AppCompatActivity {
             image.setImageDrawable(getResources().getDrawable(R.drawable.bunnieseaster));
 
         }
-        if (bookName.equals("AprilFool")){
+        else if (bookName.equals("AprilFool")){
             //April Fool!
             textOne.setText("Harry the cat, his little sister " +
                     "Emily, and their parents all play tricks " +
@@ -245,7 +245,7 @@ public class BookDescription extends AppCompatActivity {
             image.setImageDrawable(getResources().getDrawable(R.drawable.aprilfool));
 
         }
-        if (bookName.equals("Brunch")){
+        else if (bookName.equals("Brunch")){
             //Fancy Nancy's Marvelous Mother's Day Brunch
             textOne.setText("Nancy wants to plan the best Mother's" +
                     " day yet, so she's pulling out all the stops." +
@@ -256,7 +256,7 @@ public class BookDescription extends AppCompatActivity {
             image.setImageDrawable(getResources().getDrawable(R.drawable.fancynancy));
 
         }
-        if (bookName.equals("Spring")){
+        else if (bookName.equals("Spring")){
             //And Then It's Spring
             textOne.setText("After a snowy winter, a boy " +
                     "and his dog dig, and dig, and dig hoping" +
@@ -266,7 +266,7 @@ public class BookDescription extends AppCompatActivity {
             image.setImageDrawable(getResources().getDrawable(R.drawable.itsspring));
 
         }
-        if (bookName.equals("Rain")){
+       else if (bookName.equals("Rain")){
             //Let It Rain
             textOne.setText("Three young kids and their dog " +
                     "try all the spring activities from gardening" +
@@ -276,7 +276,7 @@ public class BookDescription extends AppCompatActivity {
             image.setImageDrawable(getResources().getDrawable(R.drawable.rain));
 
         }
-        if (bookName.equals("Hurray")) {
+        else if (bookName.equals("Hurray")) {
             //Hurray For Spring
             textOne.setText("Patricia Hubbell's book is an anthem " +
                     "to spring. The sensory trip of spring " +

@@ -163,7 +163,7 @@ public class SelectedBooks extends Activity {
 
         }
 
-        if(value1 == 1 && value2 == 1 && value3==1){
+        else if(value1 == 1 && value2 == 1 && value3==1){
             //   this.setListAdapter(new ArrayAdapter<String>(
             //           this, R.layout.list,
             //           R.id.Itemname, winterHolidayBooks));
@@ -198,7 +198,7 @@ public class SelectedBooks extends Activity {
         }
 
 
-        if(value1 == 1 && value2 == 2 && value3==2){
+        else if(value1 == 1 && value2 == 2 && value3==2){
             //   this.setListAdapter(new ArrayAdapter<String>(
             //           this, R.layout.list,
             //           R.id.Itemname, summerActivityBooks));
@@ -232,7 +232,7 @@ public class SelectedBooks extends Activity {
             });
         }
 
-        if(value1 == 1 && value2 == 2 && value3==1){
+        else if(value1 == 1 && value2 == 2 && value3==1){
             //   this.setListAdapter(new ArrayAdapter<String>(
             //           this, R.layout.list,
             //           R.id.Itemname, summerHolidayBooks));
@@ -269,7 +269,7 @@ public class SelectedBooks extends Activity {
         }
 
 
-        if(value1 == 1 && value2 == 3 && value3==2){
+        else if(value1 == 1 && value2 == 3 && value3==2){
             //   this.setListAdapter(new ArrayAdapter<String>(
             //           this, R.layout.list,
             //           R.id.Itemname, springActivityBooks));
@@ -305,7 +305,7 @@ public class SelectedBooks extends Activity {
         }
 
 
-        if(value1 == 1 && value2 == 3 && value3==1){
+        else if(value1 == 1 && value2 == 3 && value3==1){
             //   this.setListAdapter(new ArrayAdapter<String>(
             //           this, R.layout.list,
             //          R.id.Itemname, springHolidayBooks));
@@ -341,7 +341,7 @@ public class SelectedBooks extends Activity {
 
 
         }
-        if(value1 == 1 && value2 == 4 && value3==2){
+        else if(value1 == 1 && value2 == 4 && value3==2){
             //  this.setListAdapter(new ArrayAdapter<String>(
             //          this, R.layout.list,
             //          R.id.Itemname, fallActivityBooks));
@@ -376,9 +376,8 @@ public class SelectedBooks extends Activity {
             });
         }
 
-        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-        if(value1 == 1 && value2 == 4 && value3==1){
+        else if(value1 == 1 && value2 == 4 && value3==1){
             //   this.setListAdapter(new ArrayAdapter<String>(
             //           this, R.layout.list,
             //           R.id.Itemname, fallHolidayBooks));
