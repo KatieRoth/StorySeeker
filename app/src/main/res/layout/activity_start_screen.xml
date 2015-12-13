@@ -37,7 +37,7 @@
         android:layout_alignTop="@+id/quiz"
         android:layout_toEndOf="@+id/quiz" />
     <ImageView
-        android:layout_width="200dp"
+        android:layout_width="320dp"
         android:layout_height="100dp"
         android:src="@drawable/scholasticlogo"
         android:scaleType="fitXY"
