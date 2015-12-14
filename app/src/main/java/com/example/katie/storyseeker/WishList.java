@@ -87,19 +87,7 @@ public class WishList extends ListActivity{
 
     protected void onListItemClick(ListView l, View v, int position, long id)
     {
-        super.onListItemClick(l, v, position, id);
-        if (l.getItemAtPosition(position).toString()== "There Was a Cold Lady Who Swallowed Some Snow!") {
-            Intent intent = new Intent(this, ColdLadyBook.class);
-            startActivity(intent);
-        }
-        if (l.getItemAtPosition(position).toString()== "Winter Is") {
-            Intent intent = new Intent(this, WinterIsBook.class);
-            startActivity(intent);
-        }
-        if (l.getItemAtPosition(position).toString()== "Making a Friend") {
-            Intent intent = new Intent(this, MakingAFriend.class);
-            startActivity(intent);
-        }
+
     }
 
 

@@ -53,15 +53,6 @@
                 android:value="com.example.katie.storyseeker.StartScreen" />
         </activity>
         <activity
-            android:name=".ColdLadyBook"
-            android:label="@string/title_activity_cold_lady_book"></activity>
-        <activity
-            android:name=".WinterIsBook"
-            android:label="@string/title_activity_winter_is_book"></activity>
-        <activity
-            android:name=".MakingAFriend"
-            android:label="@string/title_activity_making_afriend"></activity>
-        <activity
             android:name=".BookDescription"
             android:label="@string/title_activity_book_description"></activity>
         <activity
