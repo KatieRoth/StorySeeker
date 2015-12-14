@@ -1,22 +1,22 @@
 package com.example.katie.storyseeker;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class BookDescription extends AppCompatActivity {
 
     public String bookName;
     public final static String PAR_KEY = "com.example.katie.storyseeker.par";
 
+    public String buyLink = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,20 +26,34 @@ public class BookDescription extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         bookName = bundle.getString("book");
 
+
+
         final ImageButton addToWishList = (ImageButton) findViewById(R.id.addToWishList);
         final TextView textOne = (TextView) findViewById(R.id.textView2);
         final ImageView image = (ImageView) findViewById(R.id.imageView2);
         final TextView title = (TextView) findViewById(R.id.textView);
         final TextView author = (TextView) findViewById(R.id.textView1);
+        final ImageButton toHome = (ImageButton) findViewById(R.id.homeButton);
+        final ImageButton buyNow = (ImageButton) findViewById(R.id.buyButton);
 
-
+        buyNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                buyNow(v);
+            }
+        });
 
         addToWishList.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 addToWishList(v);
             }
         });
-
+        toHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toHome(v);
+            }
+        });
         if (bookName.equals("ColdLady")) {
             //"There Was a Cold Lady Who Swallowed Some Snow!"
             title.setText("There Was a Cold Lady Who Swallowed Some Snow!");
@@ -55,7 +69,9 @@ public class BookDescription extends AppCompatActivity {
                     "The lively ad hilarious book will keep " +
                     "children on their toes with a surprise " +
                     "ending that will leave them begging for more.");
-            image.setImageDrawable(getResources().getDrawable(R.drawable.acoldlady));
+            buyLink = "http://www.amazon.com/gp/aw/d/0439567033/ref=mp_s_a_1_1?qid=1450093195&sr=8-1&pi=SY200_QL40&keywords=there+was+a+cold+lady+who+swallowed+some+snow&dpPl=1&dpID=61hCxbemKZL&ref=plSrch\n";
+            image.setBackgroundResource(R.drawable.acoldlady);
+
 
         }
         else if (bookName.equals("WinterIs")) {
@@ -70,7 +86,9 @@ public class BookDescription extends AppCompatActivity {
                     "that winter has to offer. Illustrated " +
                     "in water color, Dixon's celebration of " +
                     "Winter is perfect for tuck-in time.");
-            image.setImageDrawable(getResources().getDrawable(R.drawable.winteris));
+
+            buyLink ="http://www.amazon.com/gp/aw/d/0882405438/ref=mp_s_a_1_1?qid=1450094068&sr=8-1&keywords=Winter+is+Ann&pi=SY200_QL40&dpPl=1&dpID=514HTVGMKVL&ref=plSrch";
+            image.setBackgroundResource(R.drawable.winteris);
 
         }
         else if (bookName.equals("MakingAFriend")){
@@ -90,8 +108,8 @@ public class BookDescription extends AppCompatActivity {
                     "is build a snowman. But what happens when the " +
                     "snow melts? Read more to see how this young boy " +
                     "stays connected to his snowy pal forever.");
-
-            image.setImageDrawable(getResources().getDrawable(R.drawable.makingfriend));
+            buyLink = "http://www.amazon.com/gp/aw/d/1416989986/ref=mp_s_a_1_1?qid=1450093228&sr=8-1&pi=SY200_QL40&keywords=making+a+friend&dpPl=1&dpID=51YGEJ4193L&ref=plSrch";
+            image.setBackgroundResource(R.drawable.makingfriend);
 
         }
         else if (bookName.equals("Grinch")){
@@ -105,7 +123,8 @@ public class BookDescription extends AppCompatActivity {
                     "' Dr. Seuss' classic christmas-time book is " +
                     "a traditional story that both young and old " +
                     "continue to love and cherrish.");
-            image.setImageDrawable(getResources().getDrawable(R.drawable.grinchstolechristmas));
+            buyLink = "http://www.amazon.com/gp/aw/d/0394800796/ref=mp_s_a_1_1?qid=1450093271&sr=8-1&pi=SY200_QL40&keywords=how+the+grinch+stole+christmas+book&dpPl=1&dpID=512PxXsTebL&ref=plSrch";
+            image.setBackgroundResource(R.drawable.grinchstolechristmas);
 
         }
         else if (bookName.equals("PolarExpress")) {
@@ -118,7 +137,8 @@ public class BookDescription extends AppCompatActivity {
                     "North Pole with Santa. The mysterious " +
                     "journey is a beloved classic, destine to " +
                     "get every child excited for the holidays.");
-            image.setImageDrawable(getResources().getDrawable(R.drawable.polarexpress));
+            buyLink = "http://www.amazon.com/gp/aw/d/0544580141/ref=mp_s_a_1_1?qid=1450093300&sr=8-1&pi=SX200_QL40&keywords=the+polar+express+book&dpPl=1&dpID=519LkZvfH8L&ref=plSrch";
+            image.setBackgroundResource(R.drawable.polarexpress);
         }
 
         else if (bookName.equals("Valentines")) {
@@ -129,7 +149,8 @@ public class BookDescription extends AppCompatActivity {
             textOne.setText("From the author of 'If You Give a " +
                     "Mouse a Cookie, mouse and his friends " +
                     "celebrate the loving holiday of chocolate and cards.' ");
-            image.setImageDrawable(getResources().getDrawable(R.drawable.valentinesdaymouse));
+            buyLink = "http://www.amazon.com/gp/aw/d/0061804320/ref=mp_s_a_1_1?qid=1450093326&sr=8-1&pi=SY200_QL40&keywords=happy+valentines+day+mouse&dpPl=1&dpID=61baKTsvG9L&ref=plSrch";
+            image.setBackgroundResource(R.drawable.valentinesdaymouse);
 
         }
 
@@ -144,7 +165,8 @@ public class BookDescription extends AppCompatActivity {
                     "The watercolor illustrations and rhyming " +
                     "help depict the celebratory rituals of " +
                     "Independence day.");
-            image.setImageDrawable(getResources().getDrawable(R.drawable.mice));
+            buyLink = "http://www.amazon.com/gp/aw/d/0544226054/ref=mp_s_a_1_1?qid=1450093365&sr=8-1&pi=SY200_QL40&keywords=fourth+of+july+mice&dpPl=1&dpID=614HucGfoLL&ref=plSrch";
+            image.setBackgroundResource(R.drawable.mice);
 
         }
         else if (bookName.equals("Froggy")){
@@ -156,8 +178,8 @@ public class BookDescription extends AppCompatActivity {
                     "day by a golf outing, but when little " +
                     "froggy hits his dad with a club it seems " +
                     "like the day couldn't get any worse.");
-
-            image.setImageDrawable(getResources().getDrawable(R.drawable.froggysdaywithdad));
+            buyLink = "http://www.amazon.com/gp/aw/d/0142406341/ref=mp_s_a_1_1?qid=1450093397&sr=8-1&pi=SX200_QL40&keywords=froggys+day+with+dad&dpPl=1&dpID=61Vtz-xeA-L&ref=plSrch#";
+            image.setBackgroundResource(R.drawable.froggysdaywithdad);
 
         }
         else if (bookName.equals("Flag")){
@@ -171,7 +193,8 @@ public class BookDescription extends AppCompatActivity {
                     "children the representation behind the " +
                     "national flag and the different meanings " +
                     "for different people.' ");
-            image.setImageDrawable(getResources().getDrawable(R.drawable.flagforall));
+            buyLink = "http://www.amazon.com/gp/aw/d/0516245252/ref=mp_s_a_1_1?qid=1450093428&sr=8-1&keywords=a+flag+for+all&pi=SY200_QL40&dpPl=1&dpID=51C9xQoNZbL&ref=plSrch";
+            image.setBackgroundResource(R.drawable.flagforall);
 
 
         }
@@ -183,8 +206,8 @@ public class BookDescription extends AppCompatActivity {
             textOne.setText("It's almost time for the first " +
                     "day of summer camp, but one little camper " +
                     "catches a case of the butterflies.");
-
-            image.setImageDrawable(getResources().getDrawable(R.drawable.camp));
+            buyLink = "http://www.amazon.com/Night-Before-Summer-Camp/dp/0448446391/ref=sr_1_1?ie=UTF8&qid=1449073986&sr=8-1&keywords=the+night+before+summer+camp";
+            image.setBackgroundResource(R.drawable.camp);
         }
         else if (bookName.equals("Beach")){
             //Beach Day!
@@ -195,7 +218,8 @@ public class BookDescription extends AppCompatActivity {
                     "to escape the heat, and decide to take " +
                     "a trip to the beach. But they get lost " +
                     "along the way. Will they ever make it?");
-            image.setImageDrawable(getResources().getDrawable(R.drawable.beach));
+            buyLink="http://www.amazon.com/gp/aw/d/0448446391/ref=mp_s_a_1_1?qid=1450093480&sr=8-1&pi=AC_SX118_SY170_QL70&keywords=the+night+before+summer+camp";
+            image.setBackgroundResource(R.drawable.beach);
         }
         else if (bookName.equals("FunDog")){
             //Fun Dog, Sun Dog
@@ -205,7 +229,8 @@ public class BookDescription extends AppCompatActivity {
             textOne.setText("Tinka, a sandy golden retriever, " +
                     "and his best friend and owner spend " +
                     "a busy day at the beach.");
-            image.setImageDrawable(getResources().getDrawable(R.drawable.fundog));
+            buyLink="http://www.amazon.com/gp/aw/d/0761458360/ref=mp_s_a_1_1?qid=1450093665&sr=8-1&pi=SX200_QL40&keywords=fun+dog+sun+dog&dpPl=1&dpID=512NHMfFH1L&ref=plSrch";
+            image.setBackgroundResource(R.drawable.fundog);
         }
         if (bookName.equals("Pumpkin")){
             //Duck & Goose, Find a Pumpkin
@@ -219,8 +244,8 @@ public class BookDescription extends AppCompatActivity {
                     "by NY Times Best Seller, Tad Hils, readers " +
                     "will love the autumn-colored oil painting " +
                     "illustrations.");
-
-            image.setImageDrawable(getResources().getDrawable(R.drawable.duckandgoose));
+            buyLink = "http://www.amazon.com/gp/aw/d/030798155X/ref=mp_s_a_1_1?qid=1450093701&sr=8-1&pi=SY200_QL40&keywords=duck+and+goose+find+a+pumpkin&dpPl=1&dpID=51Xbs3w-ovL&ref=plSrch";
+            image.setBackgroundResource(R.drawable.duckandgoose);
         }
         else if (bookName.equals("Parade")){
             //Milly and the Macy's Parade
@@ -232,8 +257,8 @@ public class BookDescription extends AppCompatActivity {
                     "the holiday seasons kicks off. Hoping to mix " +
                     "her old traditions with the new, Milly " +
                     "reaches out to Mr. Macy to bring the two together.");
-
-            image.setImageDrawable(getResources().getDrawable(R.drawable.milly));
+            buyLink="http://www.amazon.com/gp/aw/d/0439297559/ref=mp_s_a_1_1?qid=1450093730&sr=8-1&pi=SX200_QL40&keywords=milly+and+the+macy%27s+parade&dpPl=1&dpID=61WOsc4AWbL&ref=plSrch";
+            image.setBackgroundResource(R.drawable.milly);
         }
         else if (bookName.equals("Wiener")){
             //The Hallo-Wiener
@@ -246,8 +271,8 @@ public class BookDescription extends AppCompatActivity {
                     " season, the jokes come at full-swing as he" +
                     " dresses up as a hot dog. Oscar channels" +
                     " the negativity into courage and becomes a Grade-A hero.");
-
-            image.setImageDrawable(getResources().getDrawable(R.drawable.thehallowiener));
+            buyLink="http://www.amazon.com/gp/aw/d/0439079462/ref=mp_s_a_1_1?qid=1450093776&sr=8-1&pi=AC_SX118_SY170_QL70&keywords=hallo+weiner";
+            image.setBackgroundResource(R.drawable.thehallowiener);
         }
         if (bookName.equals("LovesFall")){
             //Who Loves the Fall?
@@ -259,7 +284,8 @@ public class BookDescription extends AppCompatActivity {
                     "this time of year fall. The bright illustrations " +
                     "will keep readers intrigued and looking " +
                     "forward to celebrating the new season.");
-            image.setImageDrawable(getResources().getDrawable(R.drawable.lovefall));
+            buyLink="http://www.amazon.com/gp/aw/d/B00JRMXXCO/ref=mp_s_a_1_1?qid=1450093804&sr=8-1&pi=AC_SX118_SY170_QL70&keywords=who+loves+fall";
+            image.setBackgroundResource(R.drawable.lovefall);
         }
         else if (bookName.equals("LetItFall")){
             //Let It Fall
@@ -271,7 +297,8 @@ public class BookDescription extends AppCompatActivity {
                     "outdoor shots, adorable children, and " +
                     "seasonal activities to teach all about " +
                     "the coming months of autumn.");
-            image.setImageDrawable(getResources().getDrawable(R.drawable.letitfall));
+            buyLink="http://www.amazon.com/gp/aw/d/0545208793/ref=mp_s_a_1_1?qid=1450093830&sr=8-1&keywords=let+if+fall&dpPl=1&dpID=61q9sVWrI1L&ref=plSrch&pi=SY200_QL40";
+            image.setBackgroundResource(R.drawable.letitfall);
         }
         else if (bookName.equals("Apples")){
             //Autumn Is for Apples
@@ -283,7 +310,8 @@ public class BookDescription extends AppCompatActivity {
                     " From apple picking to an afternoon picnic, " +
                     "readers explore the seasonal offerings all " +
                     "set to rhyme.");
-            image.setImageDrawable(getResources().getDrawable(R.drawable.apples));
+            buyLink="http://www.amazon.com/gp/aw/d/B00HBQJ4BM/ref=mp_s_a_1_1?qid=1450094590&sr=8-1&pi=AC_SX118_SY170_QL70&keywords=autumn+is+for+apples";
+            image.setBackgroundResource(R.drawable.apples);
         }
         else if (bookName.equals("Bunnies")){
             //The Dumb Bunnies Easter
@@ -294,8 +322,8 @@ public class BookDescription extends AppCompatActivity {
                     " comes an Easter bestseller about the dumb " +
                     "bunnies who actually are celebrating Christmas. " +
                     "The goofy tale is a fun read for all.");
-
-            image.setImageDrawable(getResources().getDrawable(R.drawable.bunnieseaster));
+            buyLink="http://www.amazon.com/gp/aw/d/0545008808/ref=mp_s_a_1_1?qid=1450093854&sr=8-1&pi=AC_SX118_SY170_QL70&keywords=the+dumb+bunnies+easter";
+            image.setBackgroundResource(R.drawable.bunnieseaster);
 
         }
         else if (bookName.equals("AprilFool")){
@@ -306,8 +334,8 @@ public class BookDescription extends AppCompatActivity {
             textOne.setText("Harry the cat, his little sister " +
                     "Emily, and their parents all play tricks " +
                     "on each other for April Fools' Day.");
-
-            image.setImageDrawable(getResources().getDrawable(R.drawable.aprilfool));
+            buyLink="http://www.amazon.com/gp/aw/d/0823416860/ref=mp_s_a_1_1?qid=1450093892&sr=8-1&keywords=April+fool%21+Karen#";
+            image.setBackgroundResource(R.drawable.aprilfool);
 
         }
         else if (bookName.equals("Brunch")){
@@ -320,8 +348,8 @@ public class BookDescription extends AppCompatActivity {
                     " Illustrated with thirteen flaps, readers " +
                     "can see all the surprises Nancy plans in " +
                     "order to make the day special.");
-
-            image.setImageDrawable(getResources().getDrawable(R.drawable.fancynancy));
+            buyLink="http://www.amazon.com/gp/aw/d/006170380X/ref=mp_s_a_1_1?qid=1450093944&sr=8-1&pi=SY200_QL40&keywords=fancy+nancy%27s+marvelous+mother%27s+day+brunch&dpPl=1&dpID=61Z9D8v6J%2BL&ref=plSrch";
+            image.setBackgroundResource(R.drawable.fancynancy);
 
         }
         else if (bookName.equals("Spring")){
@@ -334,7 +362,8 @@ public class BookDescription extends AppCompatActivity {
                     " to sprout a garden. The story is " +
                     "brought to life with beautiful illustrations" +
                     " and teaches the importance of patience.");
-            image.setImageDrawable(getResources().getDrawable(R.drawable.itsspring));
+            buyLink = "http://www.amazon.com/gp/aw/d/1596436247/ref=mp_s_a_1_1?qid=1450093961&sr=8-1&pi=AC_SX118_SY170_QL70&keywords=and+then+it%27s+spring";
+            image.setBackgroundResource(R.drawable.itsspring);
 
         }
        else if (bookName.equals("Rain")){
@@ -347,7 +376,8 @@ public class BookDescription extends AppCompatActivity {
                     " to kicking around a soccer ball. " +
                     "The light-hearted picture book is a perfect " +
                     "celebration of springtime.");
-            image.setImageDrawable(getResources().getDrawable(R.drawable.rain));
+            buyLink = "http://www.amazon.com/gp/aw/d/0545453437/ref=mp_s_a_1_2?qid=1450093983&sr=8-2&pi=SY200_QL40&keywords=let+it+rain&dpPl=1&dpID=61ZfPAj6FbL&ref=plSrch\n";
+            image.setBackgroundResource(R.drawable.rain);
 
         }
         else if (bookName.equals("Hurray")) {
@@ -359,7 +389,8 @@ public class BookDescription extends AppCompatActivity {
                     "to spring. The sensory trip of spring " +
                     "activities will get all who are reading " +
                     "excited for the new season.");
-            image.setImageDrawable(getResources().getDrawable(R.drawable.hurrayspring));
+            buyLink = "http://www.amazon.com/gp/aw/d/1559719133/ref=mp_s_a_1_1?qid=1450094015&sr=8-1&pi=SY200_QL40&keywords=hurray+for+spring&dpPl=1&dpID=51il3MiBbxL&ref=plSrch";
+            image.setBackgroundResource(R.drawable.hurrayspring);
         }
 
 
@@ -400,8 +431,13 @@ public class BookDescription extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    public void home(View view){
+    public void toHome(View view){
         Intent i = new Intent(this, StartScreen.class);
         startActivity(i);
+    }
+
+    public void buyNow(View view){
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(buyLink));
+        startActivity(browserIntent);
     }
 }

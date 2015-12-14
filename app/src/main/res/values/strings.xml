@@ -15,4 +15,5 @@
     <string name="title_activity_making_afriend">MakingAFriend</string>
     <string name="title_activity_globals">Globals</string>
     <string name="title_activity_book_description">BookDescription</string>
+    <string name="title_activity_buy_web_view">buyWebView</string>
 </resources>
