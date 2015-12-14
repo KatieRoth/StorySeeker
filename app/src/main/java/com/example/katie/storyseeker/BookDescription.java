@@ -17,6 +17,9 @@ public class BookDescription extends AppCompatActivity {
     public final static String PAR_KEY = "com.example.katie.storyseeker.par";
 
     public String buyLink = null;
+    public String authorString = null;
+    public String bookCoverString = null;
+    public String titleString = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,13 +73,17 @@ public class BookDescription extends AppCompatActivity {
                     "children on their toes with a surprise " +
                     "ending that will leave them begging for more.");
             buyLink = "http://www.amazon.com/gp/aw/d/0439567033/ref=mp_s_a_1_1?qid=1450093195&sr=8-1&pi=SY200_QL40&keywords=there+was+a+cold+lady+who+swallowed+some+snow&dpPl=1&dpID=61hCxbemKZL&ref=plSrch\n";
+            titleString = "There Was a Cold Lady Who Swallowed Some Snow!";
+            authorString = "Lucille Colandro";
+            bookCoverString = "acoldlady";
+
             image.setBackgroundResource(R.drawable.acoldlady);
 
 
         }
         else if (bookName.equals("WinterIs")) {
             //Winter is
-            title.setText("Winter is");
+            title.setText("Winter Is");
             author.setText("Ann Dixon");
 
             textOne.setText("From sledding to skating and " +
@@ -88,6 +95,9 @@ public class BookDescription extends AppCompatActivity {
                     "Winter is perfect for tuck-in time.");
 
             buyLink ="http://www.amazon.com/gp/aw/d/0882405438/ref=mp_s_a_1_1?qid=1450094068&sr=8-1&keywords=Winter+is+Ann&pi=SY200_QL40&dpPl=1&dpID=514HTVGMKVL&ref=plSrch";
+            titleString = "Winter Is";
+            authorString = "Ann Dixon";
+            bookCoverString = "winteris";
             image.setBackgroundResource(R.drawable.winteris);
 
         }
@@ -109,6 +119,9 @@ public class BookDescription extends AppCompatActivity {
                     "snow melts? Read more to see how this young boy " +
                     "stays connected to his snowy pal forever.");
             buyLink = "http://www.amazon.com/gp/aw/d/1416989986/ref=mp_s_a_1_1?qid=1450093228&sr=8-1&pi=SY200_QL40&keywords=making+a+friend&dpPl=1&dpID=51YGEJ4193L&ref=plSrch";
+            titleString = "TMaking a Friend";
+            authorString = "Alison McGhee";
+            bookCoverString = "makingfriend";
             image.setBackgroundResource(R.drawable.makingfriend);
 
         }
@@ -124,6 +137,9 @@ public class BookDescription extends AppCompatActivity {
                     "a traditional story that both young and old " +
                     "continue to love and cherrish.");
             buyLink = "http://www.amazon.com/gp/aw/d/0394800796/ref=mp_s_a_1_1?qid=1450093271&sr=8-1&pi=SY200_QL40&keywords=how+the+grinch+stole+christmas+book&dpPl=1&dpID=512PxXsTebL&ref=plSrch";
+            titleString = "How The Grinch Stole Christmas";
+            authorString = "Dr. Seuss";
+            bookCoverString = "grinchstolechristmas";
             image.setBackgroundResource(R.drawable.grinchstolechristmas);
 
         }
@@ -138,6 +154,9 @@ public class BookDescription extends AppCompatActivity {
                     "journey is a beloved classic, destine to " +
                     "get every child excited for the holidays.");
             buyLink = "http://www.amazon.com/gp/aw/d/0544580141/ref=mp_s_a_1_1?qid=1450093300&sr=8-1&pi=SX200_QL40&keywords=the+polar+express+book&dpPl=1&dpID=519LkZvfH8L&ref=plSrch";
+            titleString = "The Polar Express";
+            authorString = "Chris Van Allsburg";
+            bookCoverString = "polarexpress";
             image.setBackgroundResource(R.drawable.polarexpress);
         }
 
@@ -150,6 +169,9 @@ public class BookDescription extends AppCompatActivity {
                     "Mouse a Cookie, mouse and his friends " +
                     "celebrate the loving holiday of chocolate and cards.' ");
             buyLink = "http://www.amazon.com/gp/aw/d/0061804320/ref=mp_s_a_1_1?qid=1450093326&sr=8-1&pi=SY200_QL40&keywords=happy+valentines+day+mouse&dpPl=1&dpID=61baKTsvG9L&ref=plSrch";
+            titleString = "Happy Valentine's Day, Mouse!";
+            authorString = "Laura Numeroff";
+            bookCoverString = "valentinesdaymouse";
             image.setBackgroundResource(R.drawable.valentinesdaymouse);
 
         }
@@ -166,6 +188,9 @@ public class BookDescription extends AppCompatActivity {
                     "help depict the celebratory rituals of " +
                     "Independence day.");
             buyLink = "http://www.amazon.com/gp/aw/d/0544226054/ref=mp_s_a_1_1?qid=1450093365&sr=8-1&pi=SY200_QL40&keywords=fourth+of+july+mice&dpPl=1&dpID=614HucGfoLL&ref=plSrch";
+            titleString = "Fourth of July Mice";
+            authorString = "Bethany Roberts";
+            bookCoverString = "mice";
             image.setBackgroundResource(R.drawable.mice);
 
         }
@@ -179,6 +204,9 @@ public class BookDescription extends AppCompatActivity {
                     "froggy hits his dad with a club it seems " +
                     "like the day couldn't get any worse.");
             buyLink = "http://www.amazon.com/gp/aw/d/0142406341/ref=mp_s_a_1_1?qid=1450093397&sr=8-1&pi=SX200_QL40&keywords=froggys+day+with+dad&dpPl=1&dpID=61Vtz-xeA-L&ref=plSrch#";
+            titleString = "Froggy's Day with Dad";
+            authorString = "Jonathan London";
+            bookCoverString = "froggysdaywithdad";
             image.setBackgroundResource(R.drawable.froggysdaywithdad);
 
         }
@@ -194,6 +222,9 @@ public class BookDescription extends AppCompatActivity {
                     "national flag and the different meanings " +
                     "for different people.' ");
             buyLink = "http://www.amazon.com/gp/aw/d/0516245252/ref=mp_s_a_1_1?qid=1450093428&sr=8-1&keywords=a+flag+for+all&pi=SY200_QL40&dpPl=1&dpID=51C9xQoNZbL&ref=plSrch";
+            titleString = "A Flag for All";
+            authorString = "Larry Dane Brimner";
+            bookCoverString = "aflagforall";
             image.setBackgroundResource(R.drawable.flagforall);
 
 
@@ -207,6 +238,9 @@ public class BookDescription extends AppCompatActivity {
                     "day of summer camp, but one little camper " +
                     "catches a case of the butterflies.");
             buyLink = "http://www.amazon.com/Night-Before-Summer-Camp/dp/0448446391/ref=sr_1_1?ie=UTF8&qid=1449073986&sr=8-1&keywords=the+night+before+summer+camp";
+            titleString = "The Night Before Summer Camp";
+            authorString = "Natasha Wing";
+            bookCoverString = "camp";
             image.setBackgroundResource(R.drawable.camp);
         }
         else if (bookName.equals("Beach")){
@@ -219,6 +253,9 @@ public class BookDescription extends AppCompatActivity {
                     "a trip to the beach. But they get lost " +
                     "along the way. Will they ever make it?");
             buyLink="http://www.amazon.com/gp/aw/d/0448446391/ref=mp_s_a_1_1?qid=1450093480&sr=8-1&pi=AC_SX118_SY170_QL70&keywords=the+night+before+summer+camp";
+            titleString = "Beach Day!";
+            authorString = "Patricia Lakin";
+            bookCoverString = "beach";
             image.setBackgroundResource(R.drawable.beach);
         }
         else if (bookName.equals("FunDog")){
@@ -230,6 +267,9 @@ public class BookDescription extends AppCompatActivity {
                     "and his best friend and owner spend " +
                     "a busy day at the beach.");
             buyLink="http://www.amazon.com/gp/aw/d/0761458360/ref=mp_s_a_1_1?qid=1450093665&sr=8-1&pi=SX200_QL40&keywords=fun+dog+sun+dog&dpPl=1&dpID=512NHMfFH1L&ref=plSrch";
+            titleString = "Fun Dog, Sun Dog";
+            authorString = "Deborah Heiligman";
+            bookCoverString = "fundog";
             image.setBackgroundResource(R.drawable.fundog);
         }
         if (bookName.equals("Pumpkin")){
@@ -245,6 +285,9 @@ public class BookDescription extends AppCompatActivity {
                     "will love the autumn-colored oil painting " +
                     "illustrations.");
             buyLink = "http://www.amazon.com/gp/aw/d/030798155X/ref=mp_s_a_1_1?qid=1450093701&sr=8-1&pi=SY200_QL40&keywords=duck+and+goose+find+a+pumpkin&dpPl=1&dpID=51Xbs3w-ovL&ref=plSrch";
+            titleString = "Duck & Goose, Find a Pumpkin";
+            authorString = "Tad Hills";
+            bookCoverString = "duckandgoose";
             image.setBackgroundResource(R.drawable.duckandgoose);
         }
         else if (bookName.equals("Parade")){
@@ -258,6 +301,9 @@ public class BookDescription extends AppCompatActivity {
                     "her old traditions with the new, Milly " +
                     "reaches out to Mr. Macy to bring the two together.");
             buyLink="http://www.amazon.com/gp/aw/d/0439297559/ref=mp_s_a_1_1?qid=1450093730&sr=8-1&pi=SX200_QL40&keywords=milly+and+the+macy%27s+parade&dpPl=1&dpID=61WOsc4AWbL&ref=plSrch";
+            titleString = "Parade";
+            authorString = "Milly and Macy's Parade";
+            bookCoverString = "milly";
             image.setBackgroundResource(R.drawable.milly);
         }
         else if (bookName.equals("Wiener")){
@@ -272,6 +318,9 @@ public class BookDescription extends AppCompatActivity {
                     " dresses up as a hot dog. Oscar channels" +
                     " the negativity into courage and becomes a Grade-A hero.");
             buyLink="http://www.amazon.com/gp/aw/d/0439079462/ref=mp_s_a_1_1?qid=1450093776&sr=8-1&pi=AC_SX118_SY170_QL70&keywords=hallo+weiner";
+            titleString = "The Hallo-Wiener";
+            authorString = "Dav Pilkey";
+            bookCoverString = "thehallowiener";
             image.setBackgroundResource(R.drawable.thehallowiener);
         }
         if (bookName.equals("LovesFall")){
@@ -285,6 +334,9 @@ public class BookDescription extends AppCompatActivity {
                     "will keep readers intrigued and looking " +
                     "forward to celebrating the new season.");
             buyLink="http://www.amazon.com/gp/aw/d/B00JRMXXCO/ref=mp_s_a_1_1?qid=1450093804&sr=8-1&pi=AC_SX118_SY170_QL70&keywords=who+loves+fall";
+            titleString = "Who Loves The Fall?";
+            authorString = "Bob Raczka";
+            bookCoverString = "lovefall";
             image.setBackgroundResource(R.drawable.lovefall);
         }
         else if (bookName.equals("LetItFall")){
@@ -298,6 +350,9 @@ public class BookDescription extends AppCompatActivity {
                     "seasonal activities to teach all about " +
                     "the coming months of autumn.");
             buyLink="http://www.amazon.com/gp/aw/d/0545208793/ref=mp_s_a_1_1?qid=1450093830&sr=8-1&keywords=let+if+fall&dpPl=1&dpID=61q9sVWrI1L&ref=plSrch&pi=SY200_QL40";
+            titleString = "Let It Fall";
+            authorString = "Maryann Cocca-Leffler";
+            bookCoverString = "letitfall";
             image.setBackgroundResource(R.drawable.letitfall);
         }
         else if (bookName.equals("Apples")){
@@ -311,6 +366,9 @@ public class BookDescription extends AppCompatActivity {
                     "readers explore the seasonal offerings all " +
                     "set to rhyme.");
             buyLink="http://www.amazon.com/gp/aw/d/B00HBQJ4BM/ref=mp_s_a_1_1?qid=1450094590&sr=8-1&pi=AC_SX118_SY170_QL70&keywords=autumn+is+for+apples";
+            titleString = "Autumn is for Apples";
+            authorString = "Michelle Knudsen";
+            bookCoverString = "apples";
             image.setBackgroundResource(R.drawable.apples);
         }
         else if (bookName.equals("Bunnies")){
@@ -323,6 +381,9 @@ public class BookDescription extends AppCompatActivity {
                     "bunnies who actually are celebrating Christmas. " +
                     "The goofy tale is a fun read for all.");
             buyLink="http://www.amazon.com/gp/aw/d/0545008808/ref=mp_s_a_1_1?qid=1450093854&sr=8-1&pi=AC_SX118_SY170_QL70&keywords=the+dumb+bunnies+easter";
+            titleString = "The Dumb Bunnies Easter";
+            authorString = "Dav Pilkey";
+            bookCoverString = "bunnieseaster";
             image.setBackgroundResource(R.drawable.bunnieseaster);
 
         }
@@ -335,6 +396,9 @@ public class BookDescription extends AppCompatActivity {
                     "Emily, and their parents all play tricks " +
                     "on each other for April Fools' Day.");
             buyLink="http://www.amazon.com/gp/aw/d/0823416860/ref=mp_s_a_1_1?qid=1450093892&sr=8-1&keywords=April+fool%21+Karen#";
+            titleString = "April Fool!";
+            authorString = "Karen Gray Ruelle";
+            bookCoverString = "aprilfool";
             image.setBackgroundResource(R.drawable.aprilfool);
 
         }
@@ -349,6 +413,9 @@ public class BookDescription extends AppCompatActivity {
                     "can see all the surprises Nancy plans in " +
                     "order to make the day special.");
             buyLink="http://www.amazon.com/gp/aw/d/006170380X/ref=mp_s_a_1_1?qid=1450093944&sr=8-1&pi=SY200_QL40&keywords=fancy+nancy%27s+marvelous+mother%27s+day+brunch&dpPl=1&dpID=61Z9D8v6J%2BL&ref=plSrch";
+            titleString = "Fancy Nancy's Marvelous Mother's Day Brunch";
+            authorString = "Jane O'Conner";
+            bookCoverString = "fancynancy";
             image.setBackgroundResource(R.drawable.fancynancy);
 
         }
@@ -363,6 +430,9 @@ public class BookDescription extends AppCompatActivity {
                     "brought to life with beautiful illustrations" +
                     " and teaches the importance of patience.");
             buyLink = "http://www.amazon.com/gp/aw/d/1596436247/ref=mp_s_a_1_1?qid=1450093961&sr=8-1&pi=AC_SX118_SY170_QL70&keywords=and+then+it%27s+spring";
+            titleString = "And Then It's Spring";
+            authorString = "Julie Fogliano";
+            bookCoverString = "itsspring";
             image.setBackgroundResource(R.drawable.itsspring);
 
         }
@@ -377,6 +447,9 @@ public class BookDescription extends AppCompatActivity {
                     "The light-hearted picture book is a perfect " +
                     "celebration of springtime.");
             buyLink = "http://www.amazon.com/gp/aw/d/0545453437/ref=mp_s_a_1_2?qid=1450093983&sr=8-2&pi=SY200_QL40&keywords=let+it+rain&dpPl=1&dpID=61ZfPAj6FbL&ref=plSrch\n";
+            titleString = "Let It Rain";
+            authorString = "Maryann Cocca-Leffler";
+            bookCoverString = "rain";
             image.setBackgroundResource(R.drawable.rain);
 
         }
@@ -390,6 +463,9 @@ public class BookDescription extends AppCompatActivity {
                     "activities will get all who are reading " +
                     "excited for the new season.");
             buyLink = "http://www.amazon.com/gp/aw/d/1559719133/ref=mp_s_a_1_1?qid=1450094015&sr=8-1&pi=SY200_QL40&keywords=hurray+for+spring&dpPl=1&dpID=51il3MiBbxL&ref=plSrch";
+            titleString = "Hurray For Spring";
+            authorString = "Patricia Hubbell";
+            bookCoverString = "hurrayspring";
             image.setBackgroundResource(R.drawable.hurrayspring);
         }
 
@@ -400,9 +476,9 @@ public class BookDescription extends AppCompatActivity {
     public void addToWishList(View view){
         //Toast.makeText(getApplicationContext(),bookName+" added to your wishlist!", Toast.LENGTH_LONG).show();
         GlobalBook globalBook = new GlobalBook();
-        globalBook.setAuthor("author");
-        globalBook.setTitle(bookName);
-        globalBook.setBookCover("puppy");
+        globalBook.setAuthor(authorString);
+        globalBook.setTitle(titleString);
+        globalBook.setBookCover(bookCoverString);
         Intent intent = new Intent(this, WishList.class);
         Bundle mbundle = new Bundle();
         mbundle.putParcelable(PAR_KEY, globalBook);
