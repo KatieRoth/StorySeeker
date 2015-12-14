@@ -156,6 +156,10 @@ public class WishList extends ListActivity{
         }
     };
 
+    public void home(View view){
+        Intent i = new Intent(this, StartScreen.class);
+        startActivity(i);
+    }
 
 
 
