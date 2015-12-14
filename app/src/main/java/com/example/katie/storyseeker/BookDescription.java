@@ -33,8 +33,8 @@ public class BookDescription extends AppCompatActivity {
         final ImageView image = (ImageView) findViewById(R.id.imageView2);
         final TextView title = (TextView) findViewById(R.id.textView);
         final TextView author = (TextView) findViewById(R.id.textView1);
-        final ImageButton toHome = (ImageButton) findViewById(R.id.homeButton);
-        final ImageButton buyNow = (ImageButton) findViewById(R.id.buyButton);
+        final ImageButton toHome = (ImageButton) findViewById(R.id.imageButton);
+        final ImageButton buyNow = (ImageButton) findViewById(R.id.buyNow);
 
         buyNow.setOnClickListener(new View.OnClickListener() {
             @Override
