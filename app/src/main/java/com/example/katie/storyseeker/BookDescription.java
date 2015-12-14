@@ -57,7 +57,7 @@ public class BookDescription extends AppCompatActivity {
         if (bookName.equals("ColdLady")) {
             //"There Was a Cold Lady Who Swallowed Some Snow!"
             title.setText("There Was a Cold Lady Who Swallowed Some Snow!");
-            author.setText("Lucille Colandro");
+            author.setText("by Lucille Colandro");
 
             textOne.setText("A snowy take on the traditional " +
                     "'There Was an Old Lady Who Swalloed A Fly,' " +
@@ -77,7 +77,7 @@ public class BookDescription extends AppCompatActivity {
         else if (bookName.equals("WinterIs")) {
             //Winter is
             title.setText("Winter is");
-            author.setText("Ann Dixon");
+            author.setText("by Ann Dixon");
 
             textOne.setText("From sledding to skating and " +
                     "hot cocoa to gingerbread, winter is " +
@@ -94,7 +94,7 @@ public class BookDescription extends AppCompatActivity {
         else if (bookName.equals("MakingAFriend")){
             //Making a Friend
             title.setText("Making a Friend");
-            author.setText("Alison McGhee");
+            author.setText("by Alison McGhee");
 
             textOne.setText("Winter is more than cool temperatures," +
                     " but the joys of making lasting friendships. " +
@@ -115,7 +115,7 @@ public class BookDescription extends AppCompatActivity {
         else if (bookName.equals("Grinch")){
             //How The Grinch Stole Christmas
             title.setText("How The Grinch Stole Christmas");
-            author.setText("Dr. Seuss");
+            author.setText("by Dr. Seuss");
 
             textOne.setText(" 'The Grinch hated Christmas! " +
                     "The whole Christmas season! Now, please " +
@@ -130,7 +130,7 @@ public class BookDescription extends AppCompatActivity {
         else if (bookName.equals("PolarExpress")) {
             //The Polar Express
             title.setText("The Polar Express");
-            author.setText("Chris Van Allsburg");
+            author.setText("by Chris Van Allsburg");
 
             textOne.setText("Lying awake on Christmas eve, " +
                     "a young boy is swept away to visit the " +
@@ -144,7 +144,7 @@ public class BookDescription extends AppCompatActivity {
         else if (bookName.equals("Valentines")) {
             //Happy Valentine's Day, Mouse!
             title.setText("Happy Valentine's Day, Mouse!");
-            author.setText("Laura Numeroff");
+            author.setText("by Laura Numeroff");
 
             textOne.setText("From the author of 'If You Give a " +
                     "Mouse a Cookie, mouse and his friends " +
@@ -157,7 +157,7 @@ public class BookDescription extends AppCompatActivity {
         else if (bookName.equals("FourthOfJuly")) {
             //Fourth of July Mice
             title.setText("Fourth of July Mice");
-            author.setText("Bethany Roberts ");
+            author.setText("by Bethany Roberts ");
 
             textOne.setText("Four little mice fill their " +
                     "patriotic day with traditonal activities " +
@@ -172,7 +172,7 @@ public class BookDescription extends AppCompatActivity {
         else if (bookName.equals("Froggy")){
             //Froggy's Day with Dad
             title.setText("Froggy's Day with Dad");
-            author.setText("Jonathan London");
+            author.setText("by Jonathan London");
 
             textOne.setText("Froggy wants to celebrate Father's " +
                     "day by a golf outing, but when little " +
@@ -185,7 +185,7 @@ public class BookDescription extends AppCompatActivity {
         else if (bookName.equals("Flag")){
             //A Flag for All
             title.setText("A Flag for All");
-            author.setText("Larry Dane Brimner");
+            author.setText("by Larry Dane Brimner");
 
             textOne.setText("The American Flag is filled with " +
                     "stars and stripes, but what do they " +
@@ -201,7 +201,7 @@ public class BookDescription extends AppCompatActivity {
         else if (bookName.equals("SummerCamp")){
             //The Night Before Summer Camp
             title.setText("The Night Before Summer Camp");
-            author.setText("Natasha Wing");
+            author.setText("by Natasha Wing");
 
             textOne.setText("It's almost time for the first " +
                     "day of summer camp, but one little camper " +
@@ -212,7 +212,7 @@ public class BookDescription extends AppCompatActivity {
         else if (bookName.equals("Beach")){
             //Beach Day!
             title.setText("Beach Day!");
-            author.setText("Patricia Lakin");
+            author.setText("by Patricia Lakin");
 
             textOne.setText("Four alligator friends want " +
                     "to escape the heat, and decide to take " +
@@ -224,7 +224,7 @@ public class BookDescription extends AppCompatActivity {
         else if (bookName.equals("FunDog")){
             //Fun Dog, Sun Dog
             title.setText("Fun Dog, Sun Dog");
-            author.setText("Deborah Heiligman");
+            author.setText("by Deborah Heiligman");
 
             textOne.setText("Tinka, a sandy golden retriever, " +
                     "and his best friend and owner spend " +
@@ -235,7 +235,7 @@ public class BookDescription extends AppCompatActivity {
         if (bookName.equals("Pumpkin")){
             //Duck & Goose, Find a Pumpkin
             title.setText("Duck & Goose, Find a Pumpkin");
-            author.setText("Tad Hills ");
+            author.setText("by Tad Hills ");
 
             textOne.setText("Duck and Goose want to find a " +
                     "pumpkin just like their friend Thistle. " +
@@ -250,7 +250,7 @@ public class BookDescription extends AppCompatActivity {
         else if (bookName.equals("Parade")){
             //Milly and the Macy's Parade
             title.setText("Milly and the Macy's Parade");
-            author.setText("Shana Corey");
+            author.setText("by Shana Corey");
 
             textOne.setText("Milly lives in NYC, but her immigrant " +
                     "family longs for their polish traditions as " +
@@ -263,7 +263,7 @@ public class BookDescription extends AppCompatActivity {
         else if (bookName.equals("Wiener")){
             //The Hallo-Wiener
             title.setText("The Hallo-Wiener");
-            author.setText("Dav Pilkey");
+            author.setText("by Dav Pilkey");
 
             textOne.setText("Oscar the Doschand is short like " +
                     "other dogs his type, but his friends often" +
@@ -277,7 +277,7 @@ public class BookDescription extends AppCompatActivity {
         if (bookName.equals("LovesFall")){
             //Who Loves the Fall?
             title.setText("Who Loves the Fall?");
-            author.setText("Bob Raczka");
+            author.setText("by Bob Raczka");
 
             textOne.setText("Set to rhyme, Bob Razca shares all " +
                     "the special changes in nature that make " +
@@ -290,7 +290,7 @@ public class BookDescription extends AppCompatActivity {
         else if (bookName.equals("LetItFall")){
             //Let It Fall
             title.setText("Let It Fall");
-            author.setText("Maryann Cocca-Leffler");
+            author.setText("by Maryann Cocca-Leffler");
 
             textOne.setText("A short, easy reader to get into " +
                     "the autumn spirit. The book features beautiful " +
@@ -303,7 +303,7 @@ public class BookDescription extends AppCompatActivity {
         else if (bookName.equals("Apples")){
             //Autumn Is for Apples
             title.setText("Autumn Is for Apples");
-            author.setText("Michelle Knudsen");
+            author.setText("by Michelle Knudsen");
 
             textOne.setText("Michelle Knudsen's simple story is " +
                     "perfect for kids to use their imagination." +
@@ -316,7 +316,7 @@ public class BookDescription extends AppCompatActivity {
         else if (bookName.equals("Bunnies")){
             //The Dumb Bunnies Easter
             title.setText("The Dumb Bunnies Easter");
-            author.setText("Dav Pilkey");
+            author.setText("by Dav Pilkey");
 
             textOne.setText("The humurous mind of Dav Pilkey" +
                     " comes an Easter bestseller about the dumb " +
@@ -329,7 +329,7 @@ public class BookDescription extends AppCompatActivity {
         else if (bookName.equals("AprilFool")){
             //April Fool!
             title.setText("April Fool!");
-            author.setText("Karen Gray Ruelle");
+            author.setText("by Karen Gray Ruelle");
 
             textOne.setText("Harry the cat, his little sister " +
                     "Emily, and their parents all play tricks " +
@@ -341,7 +341,7 @@ public class BookDescription extends AppCompatActivity {
         else if (bookName.equals("Brunch")){
             //Fancy Nancy's Marvelous Mother's Day Brunch
             title.setText("Fancy Nancy's Marvelous Mother's Day Brunch");
-            author.setText("Jane O'Connor");
+            author.setText("by Jane O'Connor");
 
             textOne.setText("Nancy wants to plan the best Mother's" +
                     " day yet, so she's pulling out all the stops." +
@@ -355,7 +355,7 @@ public class BookDescription extends AppCompatActivity {
         else if (bookName.equals("Spring")){
             //And Then It's Spring
             title.setText("And Then It's Spring");
-            author.setText("Julie Fogliano");
+            author.setText("by Julie Fogliano");
 
             textOne.setText("After a snowy winter, a boy " +
                     "and his dog dig, and dig, and dig hoping" +
@@ -369,7 +369,7 @@ public class BookDescription extends AppCompatActivity {
        else if (bookName.equals("Rain")){
             //Let It Rain
             title.setText("Let It Rain");
-            author.setText("Maryann Cocca-Leffler ");
+            author.setText("by Maryann Cocca-Leffler ");
 
             textOne.setText("Three young kids and their dog " +
                     "try all the spring activities from gardening" +
@@ -383,7 +383,7 @@ public class BookDescription extends AppCompatActivity {
         else if (bookName.equals("Hurray")) {
             //Hurray For Spring
             title.setText("Hurray For Spring");
-            author.setText("Patricia Hubbell");
+            author.setText("by Patricia Hubbell");
 
             textOne.setText("Patricia Hubbell's book is an anthem " +
                     "to spring. The sensory trip of spring " +
