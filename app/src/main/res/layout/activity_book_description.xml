@@ -7,27 +7,80 @@
     tools:context="com.example.katie.storyseeker.BookDescription">
 
     <ImageView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:background="@drawable/puppy"
-        android:layout_above="@+id/textView"
+        android:layout_width="275dp"
+        android:layout_height="275dp"
+        android:background="@drawable/animals"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:scaleType="fitXY"/>
+        android:scaleType="fitXY"
+        android:id="@+id/imageView2" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:id="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/imageView2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:id="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:id="@+id/textView2"
         android:layout_centerVertical="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="50dp"
-        android:textSize="20sp" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add To Wishlist"
-        android:layout_below="@id/textView"
-        android:id="@+id/addToWishList"/>
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/textView1"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"/>
+
+
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:scaleType="fitXY"
+        android:background="@null"
+        android:src="@drawable/home"
+        android:onClick="home"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"/>
+
+
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:scaleType="fitXY"
+        android:background="@null"
+        android:src="@drawable/wishlisticon"
+        android:id="@+id/addToWishList"
+        android:layout_below="@id/textView2"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="20dp"/>
+
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:scaleType="fitXY"
+        android:background="@null"
+        android:src="@drawable/dollarsign"
+        android:id="@+id/buyNow"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="80dp"
+        android:layout_alignTop="@+id/addToWishList"
+         />
+
+
+
 
 </RelativeLayout>

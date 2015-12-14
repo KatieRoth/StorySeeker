@@ -16,7 +16,7 @@
     <ImageButton
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:src="@drawable/castle"
+        android:src="@drawable/fantasy"
         android:scaleType="fitXY"
         android:background="@null"
         android:id="@+id/castle"
@@ -26,7 +26,7 @@
     <ImageView
         android:layout_width="275dp"
         android:layout_height="275dp"
-        android:src="@drawable/seasons"
+        android:src="@drawable/seasonsicon"
         android:scaleType="fitXY"
         android:background="@null"
         android:onClick="seasons"
@@ -38,7 +38,7 @@
         android:layout_width="275dp"
         android:layout_height="275dp"
         android:scaleType="fitXY"
-        android:src="@drawable/animal"
+        android:src="@drawable/animals"
         android:background="@null"
         android:paddingLeft="20dp"
         android:id="@+id/animal"

@@ -7,6 +7,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,17 +26,25 @@ public class BookDescription extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         bookName = bundle.getString("book");
 
-        final Button addToWishList = (Button) findViewById(R.id.addToWishList);
-        final TextView textOne = (TextView) findViewById(R.id.textView);
+        final ImageButton addToWishList = (ImageButton) findViewById(R.id.addToWishList);
+        final TextView textOne = (TextView) findViewById(R.id.textView2);
+        final ImageView image = (ImageView) findViewById(R.id.imageView2);
+        final TextView title = (TextView) findViewById(R.id.textView);
+        final TextView author = (TextView) findViewById(R.id.textView1);
 
-        addToWishList.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
+
+
+        addToWishList.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
                 addToWishList(v);
             }
         });
 
         if (bookName.equals("ColdLady")) {
             //"There Was a Cold Lady Who Swallowed Some Snow!"
+            title.setText("There Was a Cold Lady Who Swallowed Some Snow!");
+            author.setText("Lucille Colandro");
+
             textOne.setText("A snowy take on the traditional " +
                     "'There Was an Old Lady Who Swalloed A Fly,' " +
                     "Lucille Colandro uses rhymes and beautiful " +
@@ -45,9 +55,14 @@ public class BookDescription extends AppCompatActivity {
                     "The lively ad hilarious book will keep " +
                     "children on their toes with a surprise " +
                     "ending that will leave them begging for more.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.acoldlady));
+
         }
-        if (bookName.equals("WinterIs")) {
+        else if (bookName.equals("WinterIs")) {
             //Winter is
+            title.setText("Winter is");
+            author.setText("Ann Dixon");
+
             textOne.setText("From sledding to skating and " +
                     "hot cocoa to gingerbread, winter is " +
                     "so many things. Inside Ann Dixon's " +
@@ -55,9 +70,14 @@ public class BookDescription extends AppCompatActivity {
                     "that winter has to offer. Illustrated " +
                     "in water color, Dixon's celebration of " +
                     "Winter is perfect for tuck-in time.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.winteris));
+
         }
-        if (bookName.equals("MakingAFriend")){
+        else if (bookName.equals("MakingAFriend")){
             //Making a Friend
+            title.setText("Making a Friend");
+            author.setText("Alison McGhee");
+
             textOne.setText("Winter is more than cool temperatures," +
                     " but the joys of making lasting friendships. " +
                     "When the snow hits the ground, the first thing " +
@@ -70,77 +90,128 @@ public class BookDescription extends AppCompatActivity {
                     "is build a snowman. But what happens when the " +
                     "snow melts? Read more to see how this young boy " +
                     "stays connected to his snowy pal forever.");
+
+            image.setImageDrawable(getResources().getDrawable(R.drawable.makingfriend));
+
         }
-        if (bookName.equals("Grinch")){
+        else if (bookName.equals("Grinch")){
             //How The Grinch Stole Christmas
+            title.setText("How The Grinch Stole Christmas");
+            author.setText("Dr. Seuss");
+
             textOne.setText(" 'The Grinch hated Christmas! " +
                     "The whole Christmas season! Now, please " +
                     "don't ask why. No one quite knows the reason." +
                     "' Dr. Seuss' classic christmas-time book is " +
                     "a traditional story that both young and old " +
                     "continue to love and cherrish.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.grinchstolechristmas));
+
         }
-        if (bookName.equals("PolarExpress")) {
+        else if (bookName.equals("PolarExpress")) {
             //The Polar Express
+            title.setText("The Polar Express");
+            author.setText("Chris Van Allsburg");
+
             textOne.setText("Lying awake on Christmas eve, " +
                     "a young boy is swept away to visit the " +
                     "North Pole with Santa. The mysterious " +
                     "journey is a beloved classic, destine to " +
                     "get every child excited for the holidays.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.polarexpress));
         }
-        if (bookName.equals("Valentines")) {
+
+        else if (bookName.equals("Valentines")) {
             //Happy Valentine's Day, Mouse!
+            title.setText("Happy Valentine's Day, Mouse!");
+            author.setText("Laura Numeroff");
+
             textOne.setText("From the author of 'If You Give a " +
                     "Mouse a Cookie, mouse and his friends " +
                     "celebrate the loving holiday of chocolate and cards.' ");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.valentinesdaymouse));
+
         }
 
-        if (bookName.equals("FourthOfJuly")) {
+        else if (bookName.equals("FourthOfJuly")) {
             //Fourth of July Mice
+            title.setText("Fourth of July Mice");
+            author.setText("Bethany Roberts ");
+
             textOne.setText("Four little mice fill their " +
                     "patriotic day with traditonal activities " +
                     "like parades, fireworks, and swimming. " +
                     "The watercolor illustrations and rhyming " +
                     "help depict the celebratory rituals of " +
                     "Independence day.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.mice));
+
         }
-        if (bookName.equals("Froggy")){
+        else if (bookName.equals("Froggy")){
             //Froggy's Day with Dad
+            title.setText("Froggy's Day with Dad");
+            author.setText("Jonathan London");
+
             textOne.setText("Froggy wants to celebrate Father's " +
                     "day by a golf outing, but when little " +
                     "froggy hits his dad with a club it seems " +
                     "like the day couldn't get any worse.");
+
+            image.setImageDrawable(getResources().getDrawable(R.drawable.froggysdaywithdad));
+
         }
-        if (bookName.equals("Flag")){
+        else if (bookName.equals("Flag")){
             //A Flag for All
+            title.setText("A Flag for All");
+            author.setText("Larry Dane Brimner");
+
             textOne.setText("The American Flag is filled with " +
                     "stars and stripes, but what do they " +
                     "actually mean? 'A Flag for All teaches " +
                     "children the representation behind the " +
                     "national flag and the different meanings " +
                     "for different people.' ");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.flagforall));
+
+
         }
-        if (bookName.equals("SummerCamp")){
+        else if (bookName.equals("SummerCamp")){
             //The Night Before Summer Camp
+            title.setText("The Night Before Summer Camp");
+            author.setText("Natasha Wing");
+
             textOne.setText("It's almost time for the first " +
                     "day of summer camp, but one little camper " +
                     "catches a case of the butterflies.");
+
+            image.setImageDrawable(getResources().getDrawable(R.drawable.camp));
         }
-        if (bookName.equals("Beach")){
+        else if (bookName.equals("Beach")){
             //Beach Day!
+            title.setText("Beach Day!");
+            author.setText("Patricia Lakin");
+
             textOne.setText("Four alligator friends want " +
                     "to escape the heat, and decide to take " +
                     "a trip to the beach. But they get lost " +
                     "along the way. Will they ever make it?");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.beach));
         }
-        if (bookName.equals("FunDog")){
+        else if (bookName.equals("FunDog")){
             //Fun Dog, Sun Dog
+            title.setText("Fun Dog, Sun Dog");
+            author.setText("Deborah Heiligman");
+
             textOne.setText("Tinka, a sandy golden retriever, " +
                     "and his best friend and owner spend " +
                     "a busy day at the beach.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.fundog));
         }
         if (bookName.equals("Pumpkin")){
             //Duck & Goose, Find a Pumpkin
+            title.setText("Duck & Goose, Find a Pumpkin");
+            author.setText("Tad Hills ");
+
             textOne.setText("Duck and Goose want to find a " +
                     "pumpkin just like their friend Thistle. " +
                     "So the two set out on a mission looking " +
@@ -148,96 +219,155 @@ public class BookDescription extends AppCompatActivity {
                     "by NY Times Best Seller, Tad Hils, readers " +
                     "will love the autumn-colored oil painting " +
                     "illustrations.");
+
+            image.setImageDrawable(getResources().getDrawable(R.drawable.duckandgoose));
         }
-        if (bookName.equals("Parade")){
+        else if (bookName.equals("Parade")){
             //Milly and the Macy's Parade
+            title.setText("Milly and the Macy's Parade");
+            author.setText("Shana Corey");
+
             textOne.setText("Milly lives in NYC, but her immigrant " +
                     "family longs for their polish traditions as " +
                     "the holiday seasons kicks off. Hoping to mix " +
                     "her old traditions with the new, Milly " +
                     "reaches out to Mr. Macy to bring the two together.");
+
+            image.setImageDrawable(getResources().getDrawable(R.drawable.milly));
         }
-        if (bookName.equals("Wiener")){
+        else if (bookName.equals("Wiener")){
             //The Hallo-Wiener
+            title.setText("The Hallo-Wiener");
+            author.setText("Dav Pilkey");
+
             textOne.setText("Oscar the Doschand is short like " +
                     "other dogs his type, but his friends often" +
                     " ridicule him. When it's time for Halloween" +
                     " season, the jokes come at full-swing as he" +
                     " dresses up as a hot dog. Oscar channels" +
                     " the negativity into courage and becomes a Grade-A hero.");
+
+            image.setImageDrawable(getResources().getDrawable(R.drawable.thehallowiener));
         }
         if (bookName.equals("LovesFall")){
             //Who Loves the Fall?
+            title.setText("Who Loves the Fall?");
+            author.setText("Bob Raczka");
+
             textOne.setText("Set to rhyme, Bob Razca shares all " +
                     "the special changes in nature that make " +
                     "this time of year fall. The bright illustrations " +
                     "will keep readers intrigued and looking " +
                     "forward to celebrating the new season.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.lovefall));
         }
-        if (bookName.equals("LetItFall")){
+        else if (bookName.equals("LetItFall")){
             //Let It Fall
+            title.setText("Let It Fall");
+            author.setText("Maryann Cocca-Leffler");
+
             textOne.setText("A short, easy reader to get into " +
                     "the autumn spirit. The book features beautiful " +
                     "outdoor shots, adorable children, and " +
                     "seasonal activities to teach all about " +
                     "the coming months of autumn.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.letitfall));
         }
-        if (bookName.equals("Apples")){
+        else if (bookName.equals("Apples")){
             //Autumn Is for Apples
+            title.setText("Autumn Is for Apples");
+            author.setText("Michelle Knudsen");
+
             textOne.setText("Michelle Knudsen's simple story is " +
                     "perfect for kids to use their imagination." +
                     " From apple picking to an afternoon picnic, " +
                     "readers explore the seasonal offerings all " +
                     "set to rhyme.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.apples));
         }
-        if (bookName.equals("Bunnies")){
+        else if (bookName.equals("Bunnies")){
             //The Dumb Bunnies Easter
+            title.setText("The Dumb Bunnies Easter");
+            author.setText("Dav Pilkey");
+
             textOne.setText("The humurous mind of Dav Pilkey" +
                     " comes an Easter bestseller about the dumb " +
                     "bunnies who actually are celebrating Christmas. " +
                     "The goofy tale is a fun read for all.");
+
+            image.setImageDrawable(getResources().getDrawable(R.drawable.bunnieseaster));
+
         }
-        if (bookName.equals("AprilFool")){
+        else if (bookName.equals("AprilFool")){
             //April Fool!
+            title.setText("April Fool!");
+            author.setText("Karen Gray Ruelle");
+
             textOne.setText("Harry the cat, his little sister " +
                     "Emily, and their parents all play tricks " +
                     "on each other for April Fools' Day.");
+
+            image.setImageDrawable(getResources().getDrawable(R.drawable.aprilfool));
+
         }
-        if (bookName.equals("Brunch")){
+        else if (bookName.equals("Brunch")){
             //Fancy Nancy's Marvelous Mother's Day Brunch
+            title.setText("Fancy Nancy's Marvelous Mother's Day Brunch");
+            author.setText("Jane O'Connor");
+
             textOne.setText("Nancy wants to plan the best Mother's" +
                     " day yet, so she's pulling out all the stops." +
                     " Illustrated with thirteen flaps, readers " +
                     "can see all the surprises Nancy plans in " +
                     "order to make the day special.");
+
+            image.setImageDrawable(getResources().getDrawable(R.drawable.fancynancy));
+
         }
-        if (bookName.equals("Spring")){
+        else if (bookName.equals("Spring")){
             //And Then It's Spring
+            title.setText("And Then It's Spring");
+            author.setText("Julie Fogliano");
+
             textOne.setText("After a snowy winter, a boy " +
                     "and his dog dig, and dig, and dig hoping" +
                     " to sprout a garden. The story is " +
                     "brought to life with beautiful illustrations" +
                     " and teaches the importance of patience.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.itsspring));
+
         }
-        if (bookName.equals("Rain")){
+       else if (bookName.equals("Rain")){
             //Let It Rain
+            title.setText("Let It Rain");
+            author.setText("Maryann Cocca-Leffler ");
+
             textOne.setText("Three young kids and their dog " +
                     "try all the spring activities from gardening" +
                     " to kicking around a soccer ball. " +
                     "The light-hearted picture book is a perfect " +
                     "celebration of springtime.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.rain));
+
         }
-        if (bookName.equals("Hurray")) {
+        else if (bookName.equals("Hurray")) {
             //Hurray For Spring
+            title.setText("Hurray For Spring");
+            author.setText("Patricia Hubbell");
+
             textOne.setText("Patricia Hubbell's book is an anthem " +
                     "to spring. The sensory trip of spring " +
                     "activities will get all who are reading " +
                     "excited for the new season.");
+            image.setImageDrawable(getResources().getDrawable(R.drawable.hurrayspring));
         }
+
+
 
     }
 
     public void addToWishList(View view){
+        //Toast.makeText(getApplicationContext(),bookName+" added to your wishlist!", Toast.LENGTH_LONG).show();
         GlobalBook globalBook = new GlobalBook();
         globalBook.setAuthor("author");
         globalBook.setTitle(bookName);
@@ -269,5 +399,9 @@ public class BookDescription extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void home(View view){
+        Intent i = new Intent(this, StartScreen.class);
+        startActivity(i);
     }
 }
