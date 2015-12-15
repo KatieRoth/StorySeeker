@@ -14,6 +14,8 @@ import android.view.View;
 //Seasons, Winter, Activities
 public class StartScreen extends AppCompatActivity {
 
+    //Rachel Davis
+    //Button to start quiz
     public void quiz(View view){
         Intent intent = new Intent(this, QuizStart.class);
         startActivity(intent);

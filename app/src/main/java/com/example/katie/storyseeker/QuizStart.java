@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+//Rachel Davis
+//First quiz question
 public class QuizStart extends AppCompatActivity {
 
     //Globals var = (Globals)getApplicationContext();
@@ -56,6 +58,9 @@ public class QuizStart extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    //Rachel Davis
+    //button to take you to home
     public void home(View view){
         Intent i = new Intent(this, StartScreen.class);
         startActivity(i);

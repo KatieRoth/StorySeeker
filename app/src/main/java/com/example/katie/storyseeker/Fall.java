@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+//Rachel Davis
 public class Fall extends AppCompatActivity {
 
     @Override
@@ -59,6 +60,8 @@ public class Fall extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    //Rachel Davis
+    //Button to take you to home
     public void home(View view){
         Intent i = new Intent(this, StartScreen.class);
         startActivity(i);
