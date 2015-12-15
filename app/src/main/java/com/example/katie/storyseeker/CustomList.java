@@ -11,6 +11,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+//Katie Roth
+//List adapter
+//From http://www.learn2crack.com/2013/10/android-custom-listview-images-text-example.html
+
 public class CustomList extends ArrayAdapter<String>{
 
     private final Activity context;

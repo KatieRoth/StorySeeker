@@ -11,6 +11,11 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/*
+Katie Roth
+Book Description Page that changes based on which book was click on
+ */
+
 public class BookDescription extends AppCompatActivity {
 
     public String bookName;
@@ -57,6 +62,10 @@ public class BookDescription extends AppCompatActivity {
                 toHome(v);
             }
         });
+
+        //Katie Roth
+        //Checks the buddle that was passed and based on that info
+        //the page is populated with the correct image and text
         if (bookName.equals("ColdLady")) {
             //"There Was a Cold Lady Who Swallowed Some Snow!"
             title.setText("There Was a Cold Lady Who Swallowed Some Snow!");
