@@ -1,9 +1,14 @@
 package com.example.katie.storyseeker;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,25 +16,36 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-/*
-Katie Roth
-Book Description Page that changes based on which book was click on
- */
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 public class BookDescription extends AppCompatActivity {
 
     public String bookName;
-    public final static String PAR_KEY = "com.example.katie.storyseeker.par";
 
+    private static final String TABLE_NAME= "wishList";
+    private static final String TITLE = "TITLE";
+    private static final String AUTHOR = "AUTHOR";
+    private static final String COVER = "COVER";
     public String buyLink = null;
-    public String authorString = null;
-    public String bookCoverString = null;
-    public String titleString = null;
+    public String authorString = "yes";
+    public String bookCoverString = "yes";
+    public String titleString = "yes";
+    private static String DB_PATH="/data/data/com.example.katie.storyseeker/databases";
+    private static final String DB_NAME = "StorySeekerBooks";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_description);
+
+        try {
+            copyDataBase();
+        } catch (IOException se) {
+
+        }
 
         Bundle bundle = getIntent().getExtras();
         bookName = bundle.getString("book");
@@ -42,7 +58,7 @@ public class BookDescription extends AppCompatActivity {
         final TextView title = (TextView) findViewById(R.id.textView);
         final TextView author = (TextView) findViewById(R.id.textView1);
         final ImageButton toHome = (ImageButton) findViewById(R.id.homeButton);
-        final ImageButton buyNow = (ImageButton) findViewById(R.id.buyButton);
+        final ImageButton buyNow = (ImageButton) findViewById(R.id.buyNow);
 
         buyNow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +69,8 @@ public class BookDescription extends AppCompatActivity {
 
         addToWishList.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                addToWishList(v);
+                addToWishList(authorString, titleString, bookCoverString);
+                toWishList(v);
             }
         });
         toHome.setOnClickListener(new View.OnClickListener() {
@@ -62,10 +79,6 @@ public class BookDescription extends AppCompatActivity {
                 toHome(v);
             }
         });
-
-        //Katie Roth
-        //Checks the buddle that was passed and based on that info
-        //the page is populated with the correct image and text
         if (bookName.equals("ColdLady")) {
             //"There Was a Cold Lady Who Swallowed Some Snow!"
             title.setText("There Was a Cold Lady Who Swallowed Some Snow!");
@@ -482,16 +495,44 @@ public class BookDescription extends AppCompatActivity {
 
     }
 
-    public void addToWishList(View view){
-        //Toast.makeText(getApplicationContext(),bookName+" added to your wishlist!", Toast.LENGTH_LONG).show();
-        GlobalBook globalBook = new GlobalBook();
-        globalBook.setAuthor(authorString);
-        globalBook.setTitle(titleString);
-        globalBook.setBookCover(bookCoverString);
+    //I cant get the class to add a record to the database for the wishlist, tried for hours. Subtract points from me, not Katie or Rachel.
+    //It is supposed to be adding a record to the wishlist table based upon which specific book discription is up. 
+    public void addToWishList(String author, String title, String cover){
+
+        String myPath = DB_PATH + DB_NAME;
+        SQLiteDatabase db = SQLiteDatabase.openDatabase(myPath, null,
+                SQLiteDatabase.OPEN_READWRITE);
+
+        //String query = "INSERT INTO wishList (TITLE, AUTHOR, COVER)"+"VALUES ("+titleString+", "+authorString+", "+bookCoverString+")";
+
+        ContentValues row = new ContentValues();
+        row.put(TITLE, author);
+        row.put(AUTHOR, title);
+        row.put(COVER, cover);
+        db.insert(TABLE_NAME, null, row);
+        db.close();
+        /*
+        try{
+            //Intent intent = new Intent(BookDescription.this, WishList.class);
+            //intent.putExtra("book", titleString);
+            //startActivity(intent);
+
+            //db.execSQL(query);
+
+        }catch(SQLiteException se){
+            Log.e(getClass().getSimpleName(), "Could not open the database");
+        }finally{
+            if (db != null)
+                db.close();
+        }
+        */
+
+
+
+    }
+
+    public void toWishList (View view){
         Intent intent = new Intent(this, WishList.class);
-        Bundle mbundle = new Bundle();
-        mbundle.putParcelable(PAR_KEY, globalBook);
-        intent.putExtras(mbundle);
         startActivity(intent);
     }
 
@@ -524,5 +565,20 @@ public class BookDescription extends AppCompatActivity {
     public void buyNow(View view){
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(buyLink));
         startActivity(browserIntent);
+    }
+
+    private void copyDataBase() throws IOException {
+        InputStream myInput = getAssets().open(DB_NAME);
+        String outFileName = DB_PATH + DB_NAME;
+        OutputStream myOutput = new FileOutputStream(outFileName);
+
+        byte[] buffer = new byte[1024];
+        int length;
+        while ((length = myInput.read(buffer))>0) {myOutput.write(buffer,0,length);
+        }
+
+        myOutput.flush();
+        myOutput.close();
+        myInput.close();
     }
 }

@@ -24,15 +24,15 @@ public class GlobalBook  implements Parcelable{
         this.bookCover = bookCover;
     }
 
-    public String getTitle(String title){
+    public String getTitle(){
         return title;
     }
 
-    public String getAuthor(String author){
+    public String getAuthor(){
         return author;
     }
 
-    public String getBookCover(String bookCover){
+    public String getBookCover(){
         return bookCover;
     }
 

@@ -3,8 +3,12 @@ package com.example.katie.storyseeker;
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -20,6 +24,11 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -34,60 +43,22 @@ import java.util.List;
 public class WishList extends ListActivity{
 
 
-    LinearLayout layoutOfPopup;
-    PopupWindow popupMessage;
-    Button popupButton, insidePopupButton;
-    TextView popupText;
-    Button btnClosePopup;
-
-    List<String> books = new LinkedList<String>();
+    private ArrayList<String> bookList = new ArrayList<>();
+    private SQLiteDatabase db;
+    private static String DB_PATH="/data/data/com.example.katie.storyseeker/databases";
+    private static final String DB_NAME = "StorySeekerBooks";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_wish_list);
 
-        books.add("Winter Is");
-        setListAdapter(new ArrayAdapter<String>(this, R.layout.list, R.id.Itemname, books));
-        ListView lv = getListView();
-        lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> av, View v, int pos, long id) {
-                //Toast.makeText(WishList.this, "LongClick", Toast.LENGTH_LONG).show();
+        try {
+            copyDataBase();
+        } catch (IOException se) {
 
-                initiatePopupWindow();
-                //popupInit();
-
-                return true;
-            }
-        });
-
-
-        books.add("Please work");
-        setListAdapter(new ArrayAdapter<String>(this, R.layout.list, R.id.Itemname, books));
-        lv = getListView();
-        lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> av, View v, int pos, long id) {
-                initiatePopupWindow();
-                return true;
-            }
-        });
-
-    }
-
-
-   /* public boolean onItemLongClick(AdapterView<?> l, View v,
-                                   final int position, long id) {
-
-        Toast.makeText(this, "long clicked pos: " + position, Toast.LENGTH_LONG).show();
-
-        return true;
-    }
-    */
-
-    protected void onListItemClick(ListView l, View v, int position, long id)
-    {
-
+        }
+        displayAllEntries();
     }
 
 
@@ -113,36 +84,56 @@ public class WishList extends ListActivity{
         return super.onOptionsItemSelected(item);
     }
 
-    private PopupWindow pwindo;
+    private void copyDataBase() throws IOException{
+        InputStream myInput = getAssets().open(DB_NAME);
+        String outFileName = DB_PATH + DB_NAME;
+        OutputStream myOutput = new FileOutputStream(outFileName);
 
-    private void initiatePopupWindow() {
-        try {
-// We need to get the instance of the LayoutInflater
-            LayoutInflater inflater = (LayoutInflater) WishList.this
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            View layout = inflater.inflate(R.layout.popup,
-                    (ViewGroup) findViewById(R.id.popup_element));
-            pwindo = new PopupWindow(layout, 300, 370, true);
-            pwindo.showAtLocation(layout, Gravity.CENTER, 0, 0);
-
-            btnClosePopup = (Button) layout.findViewById(R.id.btn_close_popup);
-            btnClosePopup.setOnClickListener(cancel_button_click_listener);
-
-        } catch (Exception e) {
-            e.printStackTrace();
+        byte[] buffer = new byte[1024];
+        int length;
+        while ((length = myInput.read(buffer))>0) {myOutput.write(buffer,0,length);
         }
 
+        myOutput.flush();
+        myOutput.close();
+        myInput.close();
     }
 
-    private View.OnClickListener cancel_button_click_listener = new OnClickClass();
+    public void displayAllEntries() {
+        try {
+            String myPath = DB_PATH + DB_NAME;
+            SQLiteDatabase db = SQLiteDatabase.openDatabase(myPath, null,
+                    SQLiteDatabase.OPEN_READONLY);
 
-    private class OnClickClass implements View.OnClickListener{
-        public void onClick(View v) {
-            //Remove Book
-            pwindo.dismiss();
+            String selectQuery = "SELECT TITLE, AUTHOR, COVER FROM wishList";
+            Cursor cursor = db.rawQuery(selectQuery, null);
 
+            if (cursor != null) {
+                if (cursor.moveToFirst()) {
+                    do {
+                        String title = cursor.getString(cursor.getColumnIndex("TITLE"));
+                        String author = cursor.getString(cursor.getColumnIndex("AUTHOR"));
+                        String cover = cursor.getString(cursor.getColumnIndex("COVER"));
+                        bookList.add("Title: " + title + "\n" + "Author: " + author);
+                    } while (cursor.moveToNext());
+                }
+            }
+        }catch(SQLiteException se){
+            Log.e(getClass().getSimpleName(), "Could not open the database");
+        }finally{
+            if (db != null)
+                db.close();
         }
-    };
+
+        TextView tView = new TextView(this);
+        tView.setText("Your Wishlist");
+        getListView().addHeaderView(tView);
+
+        setListAdapter(new ArrayAdapter<>(
+                this, android.R.layout.simple_list_item_1, bookList));
+        getListView().setTextFilterEnabled(true);
+
+    }
 
     public void home(View view){
         Intent i = new Intent(this, StartScreen.class);
